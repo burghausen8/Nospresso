@@ -1,0 +1,1578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		382734D046FEB624A7BB1C79 /* Pods_NospressoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C84FC611055FD6BEF72FC26 /* Pods_NospressoTests.framework */; };
+		508E309FC686D8D4A9A08639 /* Pods_Nospresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48675CDD1AC66262C082226F /* Pods_Nospresso.framework */; };
+		D992B047A545A1AD3D9D817F /* Pods_Nospresso_NospressoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821987069DF244AB8A4789E8 /* Pods_Nospresso_NospressoUITests.framework */; };
+		E33B76A029C2262B0071F662 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B769F29C2262B0071F662 /* UIImageView.swift */; };
+		E33B76A429C22ECA0071F662 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76A329C22ECA0071F662 /* Favorites.swift */; };
+		E33B76A629C22FA20071F662 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76A529C22FA20071F662 /* Favorite.swift */; };
+		E33B76A829C240DB0071F662 /* CoffeesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76A729C240DB0071F662 /* CoffeesRouter.swift */; };
+		E33B76AA29C24EA30071F662 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76A929C24EA30071F662 /* Loading.swift */; };
+		E33B76AD29C24F890071F662 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76AC29C24F890071F662 /* LoadingViewController.swift */; };
+		E33B76B629C397120071F662 /* Accessories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76B529C397120071F662 /* Accessories.swift */; };
+		E33B76B929C398650071F662 /* AccessoriesDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76B829C398650071F662 /* AccessoriesDummy.swift */; };
+		E33B76BD29C39BCF0071F662 /* AccessoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76BC29C39BCF0071F662 /* AccessoriesCoordinator.swift */; };
+		E33B76BF29C39BDD0071F662 /* AccessoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76BE29C39BDD0071F662 /* AccessoriesPresenter.swift */; };
+		E33B76C129C39BEC0071F662 /* AccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76C029C39BEC0071F662 /* AccessoriesViewController.swift */; };
+		E33B76C329C39BF90071F662 /* AccessoriesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76C229C39BF90071F662 /* AccessoriesProtocols.swift */; };
+		E33B76C529C39C060071F662 /* AccessoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76C429C39C060071F662 /* AccessoriesRepository.swift */; };
+		E33B76C729C39C110071F662 /* AccessoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76C629C39C110071F662 /* AccessoriesRouter.swift */; };
+		E33B76C929C39C260071F662 /* AccessoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76C829C39C260071F662 /* AccessoryTableViewCell.swift */; };
+		E33B76CB29C3A07B0071F662 /* AccessoriesDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76B829C398650071F662 /* AccessoriesDummy.swift */; };
+		E33B76CE29C3AC490071F662 /* AccessoryDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76CD29C3AC490071F662 /* AccessoryDetailCoordinator.swift */; };
+		E33B76D029C3AC5B0071F662 /* AccessoryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76CF29C3AC5B0071F662 /* AccessoryDetailPresenter.swift */; };
+		E33B76D229C3AC650071F662 /* AccessoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76D129C3AC650071F662 /* AccessoryDetailViewController.swift */; };
+		E33B76D429C3AC6F0071F662 /* AccessoryDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76D329C3AC6F0071F662 /* AccessoryDetailProtocols.swift */; };
+		E33B76D729C3E9080071F662 /* MachinesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76D629C3E9080071F662 /* MachinesCoordinator.swift */; };
+		E33B76D929C3E9140071F662 /* MachinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76D829C3E9140071F662 /* MachinesViewController.swift */; };
+		E33B76DB29C3E91E0071F662 /* MachinesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76DA29C3E91E0071F662 /* MachinesPresenter.swift */; };
+		E33B76DD29C3E92B0071F662 /* MachinesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76DC29C3E92B0071F662 /* MachinesProtocols.swift */; };
+		E33B76DF29C3E9360071F662 /* MachinesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76DE29C3E9360071F662 /* MachinesRepository.swift */; };
+		E33B76E129C3E9410071F662 /* MachinesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76E029C3E9410071F662 /* MachinesRouter.swift */; };
+		E33B76E429C3E9900071F662 /* MachineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76E329C3E9900071F662 /* MachineCollectionViewCell.swift */; };
+		E33B76E629C3EC910071F662 /* Machines.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76E529C3EC910071F662 /* Machines.swift */; };
+		E33B76EA29C3F1C00071F662 /* MachinesDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76E929C3F1C00071F662 /* MachinesDummy.swift */; };
+		E33B76EB29C3F1C40071F662 /* MachinesDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76E929C3F1C00071F662 /* MachinesDummy.swift */; };
+		E33B76EE29C4AC6B0071F662 /* MachineDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76ED29C4AC6B0071F662 /* MachineDetailCoordinator.swift */; };
+		E33B76F029C4AC7C0071F662 /* MachineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76EF29C4AC7C0071F662 /* MachineDetailViewController.swift */; };
+		E33B76F229C4AC860071F662 /* MachineDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76F129C4AC860071F662 /* MachineDetailPresenter.swift */; };
+		E33B76F429C4AC980071F662 /* MachineDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76F329C4AC980071F662 /* MachineDetailProtocols.swift */; };
+		E33B76F729C4CFD00071F662 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76F629C4CFD00071F662 /* FavoriteTableViewCell.swift */; };
+		E33B76F929C4E31D0071F662 /* MachinesCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76F829C4E31D0071F662 /* MachinesCoordinatorSpy.swift */; };
+		E33B76FB29C4E3990071F662 /* MachinesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76FA29C4E3990071F662 /* MachinesPresenterSpy.swift */; };
+		E33B76FD29C4E3EA0071F662 /* MachinesRepositoryInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76FC29C4E3EA0071F662 /* MachinesRepositoryInputSpy.swift */; };
+		E33B76FF29C4E43C0071F662 /* MachinesRepositoryOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33B76FE29C4E43C0071F662 /* MachinesRepositoryOutputSpy.swift */; };
+		E3ACA9F029BE57A60085F559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACA9EF29BE57A60085F559 /* AppDelegate.swift */; };
+		E3ACA9F229BE57A60085F559 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACA9F129BE57A60085F559 /* SceneDelegate.swift */; };
+		E3ACA9FA29BE57A60085F559 /* Nospresso.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3ACA9F829BE57A60085F559 /* Nospresso.xcdatamodeld */; };
+		E3ACA9FC29BE57A70085F559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3ACA9FB29BE57A70085F559 /* Assets.xcassets */; };
+		E3ACA9FF29BE57A70085F559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3ACA9FD29BE57A70085F559 /* LaunchScreen.storyboard */; };
+		E3ACAA0A29BE57A80085F559 /* NospressoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA0929BE57A80085F559 /* NospressoTests.swift */; };
+		E3ACAA1429BE57A80085F559 /* NospressoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA1329BE57A80085F559 /* NospressoUITests.swift */; };
+		E3ACAA1629BE57A80085F559 /* NospressoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA1529BE57A80085F559 /* NospressoUITestsLaunchTests.swift */; };
+		E3ACAA2629BE5CB70085F559 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA2529BE5CB70085F559 /* MainMenuCoordinator.swift */; };
+		E3ACAA2829BE5CCB0085F559 /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA2729BE5CCB0085F559 /* MainMenuPresenter.swift */; };
+		E3ACAA2A29BE5CD70085F559 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA2929BE5CD70085F559 /* MainMenuViewController.swift */; };
+		E3ACAA2C29BE5CED0085F559 /* MainMenuProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA2B29BE5CED0085F559 /* MainMenuProtocols.swift */; };
+		E3ACAA2F29BE5DAF0085F559 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA2E29BE5DAF0085F559 /* CodableView.swift */; };
+		E3ACAA3229BE63E20085F559 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3129BE63E20085F559 /* TabBarController.swift */; };
+		E3ACAA3529BE68A00085F559 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3429BE68A00085F559 /* FavoritesCoordinator.swift */; };
+		E3ACAA3729BE68AD0085F559 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3629BE68AD0085F559 /* FavoritesPresenter.swift */; };
+		E3ACAA3929BE68BC0085F559 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3829BE68BC0085F559 /* FavoritesViewController.swift */; };
+		E3ACAA3B29BE68CB0085F559 /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3A29BE68CB0085F559 /* FavoritesProtocols.swift */; };
+		E3ACAA3E29BE6A2E0085F559 /* BagCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3D29BE6A2E0085F559 /* BagCoordinator.swift */; };
+		E3ACAA4029BE6A380085F559 /* BagPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA3F29BE6A380085F559 /* BagPresenter.swift */; };
+		E3ACAA4229BE6A420085F559 /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA4129BE6A420085F559 /* BagViewController.swift */; };
+		E3ACAA4429BE6A5B0085F559 /* BagProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA4329BE6A5B0085F559 /* BagProtocols.swift */; };
+		E3ACAA4729BE75500085F559 /* MenuItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ACAA4629BE75500085F559 /* MenuItemButton.swift */; };
+		E3B7314C29C76C6900679CBE /* MachinesViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7314B29C76C6900679CBE /* MachinesViewControllerSpy.swift */; };
+		E3B7314E29C76D0000679CBE /* MachinesCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7314D29C76D0000679CBE /* MachinesCoordinatorTestCase.swift */; };
+		E3B7315129C76D5D00679CBE /* NavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7315029C76D5D00679CBE /* NavigationControllerSpy.swift */; };
+		E3B7315329C76ECD00679CBE /* MachinesPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7315229C76ECD00679CBE /* MachinesPresenterTestCase.swift */; };
+		E3B7315529C7716500679CBE /* MachinesRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7315429C7716500679CBE /* MachinesRepositoryTestCase.swift */; };
+		E3B7315729C7757E00679CBE /* MachinesRouterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7315629C7757E00679CBE /* MachinesRouterTestCase.swift */; };
+		E3B7315929C7769E00679CBE /* MachinesViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7315829C7769E00679CBE /* MachinesViewControllerTestCase.swift */; };
+		E3B7316029C77E5900679CBE /* MachineDetailPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7315F29C77E5900679CBE /* MachineDetailPresenterSpy.swift */; };
+		E3B7316229C77F1200679CBE /* MachineDetailViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316129C77F1200679CBE /* MachineDetailViewControllerSpy.swift */; };
+		E3B7316429C77FCB00679CBE /* MachineDetailCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316329C77FCB00679CBE /* MachineDetailCoordinatorTestCase.swift */; };
+		E3B7316629C7804900679CBE /* MachineDetailPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316529C7804900679CBE /* MachineDetailPresenterTestCase.swift */; };
+		E3B7316829C7817A00679CBE /* MachineDetailViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316729C7817A00679CBE /* MachineDetailViewControllerTestCase.swift */; };
+		E3B7316A29C7823A00679CBE /* AccessoriesCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316929C7823A00679CBE /* AccessoriesCoordinatorSpy.swift */; };
+		E3B7316C29C7824F00679CBE /* AccessoriesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316B29C7824F00679CBE /* AccessoriesPresenterSpy.swift */; };
+		E3B7316E29C7826400679CBE /* AccessoriesRepositoryInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316D29C7826400679CBE /* AccessoriesRepositoryInputSpy.swift */; };
+		E3B7317029C7827500679CBE /* AccessoriesRepositoryOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7316F29C7827500679CBE /* AccessoriesRepositoryOutputSpy.swift */; };
+		E3B7317229C7828800679CBE /* AccessoriesViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317129C7828800679CBE /* AccessoriesViewControllerSpy.swift */; };
+		E3B7317429C783E000679CBE /* AccessoriesCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317329C783E000679CBE /* AccessoriesCoordinatorTestCase.swift */; };
+		E3B7317629C783F000679CBE /* AccessoriesPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317529C783F000679CBE /* AccessoriesPresenterTestCase.swift */; };
+		E3B7317829C783FF00679CBE /* AccessoriesRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317729C783FF00679CBE /* AccessoriesRepositoryTestCase.swift */; };
+		E3B7317A29C7840D00679CBE /* AccessoriesRouterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317929C7840D00679CBE /* AccessoriesRouterTestCase.swift */; };
+		E3B7317C29C7841D00679CBE /* AccessoriesViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317B29C7841D00679CBE /* AccessoriesViewControllerTestCase.swift */; };
+		E3B7318029C7873400679CBE /* AccessoryDetailPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7317F29C7873400679CBE /* AccessoryDetailPresenterSpy.swift */; };
+		E3B7318229C7874500679CBE /* AccessoryDetailViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318129C7874500679CBE /* AccessoryDetailViewControllerSpy.swift */; };
+		E3B7318429C787AF00679CBE /* AccessoryDetailCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318329C787AF00679CBE /* AccessoryDetailCoordinatorTestCase.swift */; };
+		E3B7318629C787CA00679CBE /* AccessoryDetailPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318529C787CA00679CBE /* AccessoryDetailPresenterTestCase.swift */; };
+		E3B7318829C787E000679CBE /* AccessoryDetailViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318729C787E000679CBE /* AccessoryDetailViewControllerTestCase.swift */; };
+		E3B7318A29C789A200679CBE /* CoffeesCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318929C789A200679CBE /* CoffeesCoordinatorSpy.swift */; };
+		E3B7318C29C789B200679CBE /* CoffeesPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318B29C789B200679CBE /* CoffeesPresenterSpy.swift */; };
+		E3B7318E29C789C200679CBE /* CoffeesRepositoryInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318D29C789C200679CBE /* CoffeesRepositoryInputSpy.swift */; };
+		E3B7319029C789DB00679CBE /* CoffeesRepositoryOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7318F29C789DB00679CBE /* CoffeesRepositoryOutputSpy.swift */; };
+		E3B7319229C789FB00679CBE /* CoffeesViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319129C789FB00679CBE /* CoffeesViewControllerSpy.swift */; };
+		E3B7319429C78C1000679CBE /* CoffeesCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319329C78C1000679CBE /* CoffeesCoordinatorTestCase.swift */; };
+		E3B7319629C78C2200679CBE /* CoffeesPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319529C78C2200679CBE /* CoffeesPresenterTestCase.swift */; };
+		E3B7319829C78C3700679CBE /* CoffeesRepositoryTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319729C78C3700679CBE /* CoffeesRepositoryTestCase.swift */; };
+		E3B7319A29C78C5600679CBE /* CoffeesRouterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319929C78C5600679CBE /* CoffeesRouterTestCase.swift */; };
+		E3B7319C29C78C6800679CBE /* CoffeesViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319B29C78C6800679CBE /* CoffeesViewControllerTestCase.swift */; };
+		E3B7319E29C78FDD00679CBE /* CoffeeDetailPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319D29C78FDD00679CBE /* CoffeeDetailPresenterSpy.swift */; };
+		E3B731A029C78FEE00679CBE /* CoffeeDetailViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7319F29C78FEE00679CBE /* CoffeeDetailViewControllerSpy.swift */; };
+		E3B731A229C7906400679CBE /* CoffeeDetailCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B731A129C7906400679CBE /* CoffeeDetailCoordinatorTest.swift */; };
+		E3B731A429C7907700679CBE /* CoffeeDetailPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B731A329C7907600679CBE /* CoffeeDetailPresenterTestCase.swift */; };
+		E3B731A629C7908900679CBE /* CoffeeDetailViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B731A529C7908900679CBE /* CoffeeDetailViewControllerTestCase.swift */; };
+		E3FF11D129BF4FBF001A0925 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11D029BF4FBF001A0925 /* R.generated.swift */; };
+		E3FF11D329BF676E001A0925 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3FF11D229BF676E001A0925 /* Localizable.strings */; };
+		E3FF11D629BF8F13001A0925 /* CoffeesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11D529BF8F13001A0925 /* CoffeesCoordinator.swift */; };
+		E3FF11D829BF8F21001A0925 /* CoffeesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11D729BF8F21001A0925 /* CoffeesPresenter.swift */; };
+		E3FF11DA29BF8F2E001A0925 /* CoffeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11D929BF8F2E001A0925 /* CoffeesViewController.swift */; };
+		E3FF11DC29BF8F3D001A0925 /* CoffeesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11DB29BF8F3D001A0925 /* CoffeesProtocols.swift */; };
+		E3FF11DF29BFAAC8001A0925 /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11DE29BFAAC8001A0925 /* CoffeeTableViewCell.swift */; };
+		E3FF11E229C0B3F1001A0925 /* Capsules.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF11E129C0B3F1001A0925 /* Capsules.swift */; };
+		E3FF120729C0DF29001A0925 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF11FC29C0DF29001A0925 /* OpenSans-Light.ttf */; };
+		E3FF120829C0DF29001A0925 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF11FD29C0DF29001A0925 /* OpenSans-SemiBoldItalic.ttf */; };
+		E3FF120929C0DF29001A0925 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF11FE29C0DF29001A0925 /* OpenSans-Italic.ttf */; };
+		E3FF120A29C0DF29001A0925 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3FF11FF29C0DF29001A0925 /* LICENSE.txt */; };
+		E3FF120B29C0DF29001A0925 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120029C0DF29001A0925 /* OpenSans-Bold.ttf */; };
+		E3FF120C29C0DF29001A0925 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120129C0DF29001A0925 /* OpenSans-LightItalic.ttf */; };
+		E3FF120D29C0DF29001A0925 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120229C0DF29001A0925 /* OpenSans-BoldItalic.ttf */; };
+		E3FF120E29C0DF29001A0925 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120329C0DF29001A0925 /* OpenSans-Regular.ttf */; };
+		E3FF120F29C0DF29001A0925 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120429C0DF29001A0925 /* OpenSans-ExtraBoldItalic.ttf */; };
+		E3FF121029C0DF29001A0925 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120529C0DF29001A0925 /* OpenSans-ExtraBold.ttf */; };
+		E3FF121129C0DF29001A0925 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FF120629C0DF29001A0925 /* OpenSans-SemiBold.ttf */; };
+		E3FF121429C0E680001A0925 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF121329C0E680001A0925 /* Double.swift */; };
+		E3FF121829C0E71B001A0925 /* CoffeeDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF121729C0E71B001A0925 /* CoffeeDummy.swift */; };
+		E3FF121929C0E8A9001A0925 /* CoffeeDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF121729C0E71B001A0925 /* CoffeeDummy.swift */; };
+		E3FF121C29C0F49B001A0925 /* CoffeeDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF121B29C0F49B001A0925 /* CoffeeDetailCoordinator.swift */; };
+		E3FF121E29C0F4A7001A0925 /* CoffeeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF121D29C0F4A7001A0925 /* CoffeeDetailPresenter.swift */; };
+		E3FF122029C0F4BA001A0925 /* CoffeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF121F29C0F4BA001A0925 /* CoffeeDetailViewController.swift */; };
+		E3FF122229C0F4C7001A0925 /* CoffeDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF122129C0F4C7001A0925 /* CoffeDetailProtocols.swift */; };
+		E3FF122429C1F795001A0925 /* CoffeeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF122329C1F794001A0925 /* CoffeeDetail.swift */; };
+		E3FF122829C1F865001A0925 /* CoffeeDetailDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF122729C1F865001A0925 /* CoffeeDetailDummy.swift */; };
+		E3FF122929C1F86B001A0925 /* CoffeeDetailDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF122729C1F865001A0925 /* CoffeeDetailDummy.swift */; };
+		E3FF122B29C20696001A0925 /* CoffeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF122A29C20696001A0925 /* CoffeesRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3ACAA0629BE57A80085F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3ACA9E429BE57A60085F559 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3ACA9EB29BE57A60085F559;
+			remoteInfo = Nospresso;
+		};
+		E3ACAA1029BE57A80085F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3ACA9E429BE57A60085F559 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3ACA9EB29BE57A60085F559;
+			remoteInfo = Nospresso;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C84FC611055FD6BEF72FC26 /* Pods_NospressoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NospressoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D37FBD5A3C948813FBFB2E /* Pods-Nospresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.release.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.release.xcconfig"; sourceTree = "<group>"; };
+		48675CDD1AC66262C082226F /* Pods_Nospresso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nospresso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF6A58EDD6A6CEAAFAB80E2 /* Pods-Nospresso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.debug.xcconfig"; sourceTree = "<group>"; };
+		821987069DF244AB8A4789E8 /* Pods_Nospresso_NospressoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nospresso_NospressoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF17D5A646638EFD0521A0D7 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E33B769F29C2262B0071F662 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		E33B76A329C22ECA0071F662 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		E33B76A529C22FA20071F662 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		E33B76A729C240DB0071F662 /* CoffeesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesRouter.swift; sourceTree = "<group>"; };
+		E33B76A929C24EA30071F662 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		E33B76AC29C24F890071F662 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		E33B76B529C397120071F662 /* Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessories.swift; sourceTree = "<group>"; };
+		E33B76B829C398650071F662 /* AccessoriesDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesDummy.swift; sourceTree = "<group>"; };
+		E33B76BC29C39BCF0071F662 /* AccessoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesCoordinator.swift; sourceTree = "<group>"; };
+		E33B76BE29C39BDD0071F662 /* AccessoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesPresenter.swift; sourceTree = "<group>"; };
+		E33B76C029C39BEC0071F662 /* AccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesViewController.swift; sourceTree = "<group>"; };
+		E33B76C229C39BF90071F662 /* AccessoriesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesProtocols.swift; sourceTree = "<group>"; };
+		E33B76C429C39C060071F662 /* AccessoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesRepository.swift; sourceTree = "<group>"; };
+		E33B76C629C39C110071F662 /* AccessoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesRouter.swift; sourceTree = "<group>"; };
+		E33B76C829C39C260071F662 /* AccessoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryTableViewCell.swift; sourceTree = "<group>"; };
+		E33B76CD29C3AC490071F662 /* AccessoryDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailCoordinator.swift; sourceTree = "<group>"; };
+		E33B76CF29C3AC5B0071F662 /* AccessoryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailPresenter.swift; sourceTree = "<group>"; };
+		E33B76D129C3AC650071F662 /* AccessoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailViewController.swift; sourceTree = "<group>"; };
+		E33B76D329C3AC6F0071F662 /* AccessoryDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailProtocols.swift; sourceTree = "<group>"; };
+		E33B76D629C3E9080071F662 /* MachinesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesCoordinator.swift; sourceTree = "<group>"; };
+		E33B76D829C3E9140071F662 /* MachinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesViewController.swift; sourceTree = "<group>"; };
+		E33B76DA29C3E91E0071F662 /* MachinesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesPresenter.swift; sourceTree = "<group>"; };
+		E33B76DC29C3E92B0071F662 /* MachinesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesProtocols.swift; sourceTree = "<group>"; };
+		E33B76DE29C3E9360071F662 /* MachinesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesRepository.swift; sourceTree = "<group>"; };
+		E33B76E029C3E9410071F662 /* MachinesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesRouter.swift; sourceTree = "<group>"; };
+		E33B76E329C3E9900071F662 /* MachineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineCollectionViewCell.swift; sourceTree = "<group>"; };
+		E33B76E529C3EC910071F662 /* Machines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machines.swift; sourceTree = "<group>"; };
+		E33B76E929C3F1C00071F662 /* MachinesDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesDummy.swift; sourceTree = "<group>"; };
+		E33B76ED29C4AC6B0071F662 /* MachineDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailCoordinator.swift; sourceTree = "<group>"; };
+		E33B76EF29C4AC7C0071F662 /* MachineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailViewController.swift; sourceTree = "<group>"; };
+		E33B76F129C4AC860071F662 /* MachineDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailPresenter.swift; sourceTree = "<group>"; };
+		E33B76F329C4AC980071F662 /* MachineDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailProtocols.swift; sourceTree = "<group>"; };
+		E33B76F629C4CFD00071F662 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		E33B76F829C4E31D0071F662 /* MachinesCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesCoordinatorSpy.swift; sourceTree = "<group>"; };
+		E33B76FA29C4E3990071F662 /* MachinesPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesPresenterSpy.swift; sourceTree = "<group>"; };
+		E33B76FC29C4E3EA0071F662 /* MachinesRepositoryInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesRepositoryInputSpy.swift; sourceTree = "<group>"; };
+		E33B76FE29C4E43C0071F662 /* MachinesRepositoryOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesRepositoryOutputSpy.swift; sourceTree = "<group>"; };
+		E3ACA9EC29BE57A60085F559 /* Nospresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nospresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3ACA9EF29BE57A60085F559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3ACA9F129BE57A60085F559 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E3ACA9F929BE57A60085F559 /* Nospresso.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nospresso.xcdatamodel; sourceTree = "<group>"; };
+		E3ACA9FB29BE57A70085F559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3ACA9FE29BE57A70085F559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3ACAA0029BE57A70085F559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3ACAA0529BE57A80085F559 /* NospressoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NospressoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3ACAA0929BE57A80085F559 /* NospressoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NospressoTests.swift; sourceTree = "<group>"; };
+		E3ACAA0F29BE57A80085F559 /* NospressoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NospressoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3ACAA1329BE57A80085F559 /* NospressoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NospressoUITests.swift; sourceTree = "<group>"; };
+		E3ACAA1529BE57A80085F559 /* NospressoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NospressoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E3ACAA2529BE5CB70085F559 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
+		E3ACAA2729BE5CCB0085F559 /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
+		E3ACAA2929BE5CD70085F559 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		E3ACAA2B29BE5CED0085F559 /* MainMenuProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuProtocols.swift; sourceTree = "<group>"; };
+		E3ACAA2E29BE5DAF0085F559 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
+		E3ACAA3129BE63E20085F559 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E3ACAA3429BE68A00085F559 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		E3ACAA3629BE68AD0085F559 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		E3ACAA3829BE68BC0085F559 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E3ACAA3A29BE68CB0085F559 /* FavoritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
+		E3ACAA3D29BE6A2E0085F559 /* BagCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCoordinator.swift; sourceTree = "<group>"; };
+		E3ACAA3F29BE6A380085F559 /* BagPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagPresenter.swift; sourceTree = "<group>"; };
+		E3ACAA4129BE6A420085F559 /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
+		E3ACAA4329BE6A5B0085F559 /* BagProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagProtocols.swift; sourceTree = "<group>"; };
+		E3ACAA4629BE75500085F559 /* MenuItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemButton.swift; sourceTree = "<group>"; };
+		E3B7314B29C76C6900679CBE /* MachinesViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3B7314D29C76D0000679CBE /* MachinesCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		E3B7315029C76D5D00679CBE /* NavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerSpy.swift; sourceTree = "<group>"; };
+		E3B7315229C76ECD00679CBE /* MachinesPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesPresenterTestCase.swift; sourceTree = "<group>"; };
+		E3B7315429C7716500679CBE /* MachinesRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesRepositoryTestCase.swift; sourceTree = "<group>"; };
+		E3B7315629C7757E00679CBE /* MachinesRouterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesRouterTestCase.swift; sourceTree = "<group>"; };
+		E3B7315829C7769E00679CBE /* MachinesViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E3B7315F29C77E5900679CBE /* MachineDetailPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailPresenterSpy.swift; sourceTree = "<group>"; };
+		E3B7316129C77F1200679CBE /* MachineDetailViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3B7316329C77FCB00679CBE /* MachineDetailCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		E3B7316529C7804900679CBE /* MachineDetailPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailPresenterTestCase.swift; sourceTree = "<group>"; };
+		E3B7316729C7817A00679CBE /* MachineDetailViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E3B7316929C7823A00679CBE /* AccessoriesCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesCoordinatorSpy.swift; sourceTree = "<group>"; };
+		E3B7316B29C7824F00679CBE /* AccessoriesPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesPresenterSpy.swift; sourceTree = "<group>"; };
+		E3B7316D29C7826400679CBE /* AccessoriesRepositoryInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesRepositoryInputSpy.swift; sourceTree = "<group>"; };
+		E3B7316F29C7827500679CBE /* AccessoriesRepositoryOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesRepositoryOutputSpy.swift; sourceTree = "<group>"; };
+		E3B7317129C7828800679CBE /* AccessoriesViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3B7317329C783E000679CBE /* AccessoriesCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		E3B7317529C783F000679CBE /* AccessoriesPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesPresenterTestCase.swift; sourceTree = "<group>"; };
+		E3B7317729C783FF00679CBE /* AccessoriesRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesRepositoryTestCase.swift; sourceTree = "<group>"; };
+		E3B7317929C7840D00679CBE /* AccessoriesRouterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesRouterTestCase.swift; sourceTree = "<group>"; };
+		E3B7317B29C7841D00679CBE /* AccessoriesViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E3B7317F29C7873400679CBE /* AccessoryDetailPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailPresenterSpy.swift; sourceTree = "<group>"; };
+		E3B7318129C7874500679CBE /* AccessoryDetailViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3B7318329C787AF00679CBE /* AccessoryDetailCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		E3B7318529C787CA00679CBE /* AccessoryDetailPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailPresenterTestCase.swift; sourceTree = "<group>"; };
+		E3B7318729C787E000679CBE /* AccessoryDetailViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E3B7318929C789A200679CBE /* CoffeesCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesCoordinatorSpy.swift; sourceTree = "<group>"; };
+		E3B7318B29C789B200679CBE /* CoffeesPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesPresenterSpy.swift; sourceTree = "<group>"; };
+		E3B7318D29C789C200679CBE /* CoffeesRepositoryInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesRepositoryInputSpy.swift; sourceTree = "<group>"; };
+		E3B7318F29C789DB00679CBE /* CoffeesRepositoryOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesRepositoryOutputSpy.swift; sourceTree = "<group>"; };
+		E3B7319129C789FB00679CBE /* CoffeesViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3B7319329C78C1000679CBE /* CoffeesCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		E3B7319529C78C2200679CBE /* CoffeesPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesPresenterTestCase.swift; sourceTree = "<group>"; };
+		E3B7319729C78C3700679CBE /* CoffeesRepositoryTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesRepositoryTestCase.swift; sourceTree = "<group>"; };
+		E3B7319929C78C5600679CBE /* CoffeesRouterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesRouterTestCase.swift; sourceTree = "<group>"; };
+		E3B7319B29C78C6800679CBE /* CoffeesViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E3B7319D29C78FDD00679CBE /* CoffeeDetailPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailPresenterSpy.swift; sourceTree = "<group>"; };
+		E3B7319F29C78FEE00679CBE /* CoffeeDetailViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3B731A129C7906400679CBE /* CoffeeDetailCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailCoordinatorTest.swift; sourceTree = "<group>"; };
+		E3B731A329C7907600679CBE /* CoffeeDetailPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailPresenterTestCase.swift; sourceTree = "<group>"; };
+		E3B731A529C7908900679CBE /* CoffeeDetailViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewControllerTestCase.swift; sourceTree = "<group>"; };
+		E3FF11D029BF4FBF001A0925 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		E3FF11D229BF676E001A0925 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E3FF11D529BF8F13001A0925 /* CoffeesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesCoordinator.swift; sourceTree = "<group>"; };
+		E3FF11D729BF8F21001A0925 /* CoffeesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesPresenter.swift; sourceTree = "<group>"; };
+		E3FF11D929BF8F2E001A0925 /* CoffeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesViewController.swift; sourceTree = "<group>"; };
+		E3FF11DB29BF8F3D001A0925 /* CoffeesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesProtocols.swift; sourceTree = "<group>"; };
+		E3FF11DE29BFAAC8001A0925 /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
+		E3FF11E129C0B3F1001A0925 /* Capsules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsules.swift; sourceTree = "<group>"; };
+		E3FF11FC29C0DF29001A0925 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		E3FF11FD29C0DF29001A0925 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBoldItalic.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3FF11FE29C0DF29001A0925 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		E3FF11FF29C0DF29001A0925 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/LICENSE.txt"; sourceTree = "<group>"; };
+		E3FF120029C0DF29001A0925 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E3FF120129C0DF29001A0925 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		E3FF120229C0DF29001A0925 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E3FF120329C0DF29001A0925 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E3FF120429C0DF29001A0925 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3FF120529C0DF29001A0925 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E3FF120629C0DF29001A0925 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBold.ttf"; path = "../../../../../../Downloads/aulas-master-fae236d02f2cc04a78cbdccbcc2cca5fdb53804b/Nospresso/Nospresso/Recursos/Fontes/Open_Sans/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E3FF121329C0E680001A0925 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		E3FF121729C0E71B001A0925 /* CoffeeDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDummy.swift; sourceTree = "<group>"; };
+		E3FF121B29C0F49B001A0925 /* CoffeeDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailCoordinator.swift; sourceTree = "<group>"; };
+		E3FF121D29C0F4A7001A0925 /* CoffeeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailPresenter.swift; sourceTree = "<group>"; };
+		E3FF121F29C0F4BA001A0925 /* CoffeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewController.swift; sourceTree = "<group>"; };
+		E3FF122129C0F4C7001A0925 /* CoffeDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeDetailProtocols.swift; sourceTree = "<group>"; };
+		E3FF122329C1F794001A0925 /* CoffeeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetail.swift; sourceTree = "<group>"; };
+		E3FF122729C1F865001A0925 /* CoffeeDetailDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailDummy.swift; sourceTree = "<group>"; };
+		E3FF122A29C20696001A0925 /* CoffeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesRepository.swift; sourceTree = "<group>"; };
+		E93D0D004C4C6AD74F87086C /* Pods-NospressoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NospressoTests.debug.xcconfig"; path = "Target Support Files/Pods-NospressoTests/Pods-NospressoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5B2906C7AF1C6938A23CEED /* Pods-Nospresso-NospressoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.release.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA36467E9E368DFF332EDE21 /* Pods-NospressoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NospressoTests.release.xcconfig"; path = "Target Support Files/Pods-NospressoTests/Pods-NospressoTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3ACA9E929BE57A60085F559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508E309FC686D8D4A9A08639 /* Pods_Nospresso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3ACAA0229BE57A80085F559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382734D046FEB624A7BB1C79 /* Pods_NospressoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3ACAA0C29BE57A80085F559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D992B047A545A1AD3D9D817F /* Pods_Nospresso_NospressoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		204069829C9B5CCE0641DEB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CF6A58EDD6A6CEAAFAB80E2 /* Pods-Nospresso.debug.xcconfig */,
+				36D37FBD5A3C948813FBFB2E /* Pods-Nospresso.release.xcconfig */,
+				CF17D5A646638EFD0521A0D7 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */,
+				F5B2906C7AF1C6938A23CEED /* Pods-Nospresso-NospressoUITests.release.xcconfig */,
+				E93D0D004C4C6AD74F87086C /* Pods-NospressoTests.debug.xcconfig */,
+				FA36467E9E368DFF332EDE21 /* Pods-NospressoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F3F0153498A8149AAB7B16B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48675CDD1AC66262C082226F /* Pods_Nospresso.framework */,
+				821987069DF244AB8A4789E8 /* Pods_Nospresso_NospressoUITests.framework */,
+				1C84FC611055FD6BEF72FC26 /* Pods_NospressoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E33B76AB29C24EC60071F662 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76A929C24EA30071F662 /* Loading.swift */,
+				E33B76AC29C24F890071F662 /* LoadingViewController.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		E33B76B429C265C90071F662 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76AB29C24EC60071F662 /* Loading */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E33B76B729C398550071F662 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7317D29C7871300679CBE /* Detail */,
+				E33B76BA29C3986A0071F662 /* Doubles */,
+				E3B7317329C783E000679CBE /* AccessoriesCoordinatorTestCase.swift */,
+				E3B7317529C783F000679CBE /* AccessoriesPresenterTestCase.swift */,
+				E3B7317729C783FF00679CBE /* AccessoriesRepositoryTestCase.swift */,
+				E3B7317929C7840D00679CBE /* AccessoriesRouterTestCase.swift */,
+				E3B7317B29C7841D00679CBE /* AccessoriesViewControllerTestCase.swift */,
+			);
+			path = Accessories;
+			sourceTree = "<group>";
+		};
+		E33B76BA29C3986A0071F662 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76B829C398650071F662 /* AccessoriesDummy.swift */,
+				E3B7316929C7823A00679CBE /* AccessoriesCoordinatorSpy.swift */,
+				E3B7316B29C7824F00679CBE /* AccessoriesPresenterSpy.swift */,
+				E3B7316D29C7826400679CBE /* AccessoriesRepositoryInputSpy.swift */,
+				E3B7316F29C7827500679CBE /* AccessoriesRepositoryOutputSpy.swift */,
+				E3B7317129C7828800679CBE /* AccessoriesViewControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		E33B76BB29C39BBB0071F662 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76CC29C3AC340071F662 /* Detail */,
+				E33B76CA29C39C290071F662 /* Cell */,
+				E33B76BC29C39BCF0071F662 /* AccessoriesCoordinator.swift */,
+				E33B76BE29C39BDD0071F662 /* AccessoriesPresenter.swift */,
+				E33B76C029C39BEC0071F662 /* AccessoriesViewController.swift */,
+				E33B76C229C39BF90071F662 /* AccessoriesProtocols.swift */,
+				E33B76C429C39C060071F662 /* AccessoriesRepository.swift */,
+				E33B76C629C39C110071F662 /* AccessoriesRouter.swift */,
+			);
+			path = Accessories;
+			sourceTree = "<group>";
+		};
+		E33B76CA29C39C290071F662 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76C829C39C260071F662 /* AccessoryTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E33B76CC29C3AC340071F662 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76CD29C3AC490071F662 /* AccessoryDetailCoordinator.swift */,
+				E33B76CF29C3AC5B0071F662 /* AccessoryDetailPresenter.swift */,
+				E33B76D129C3AC650071F662 /* AccessoryDetailViewController.swift */,
+				E33B76D329C3AC6F0071F662 /* AccessoryDetailProtocols.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E33B76D529C3E8F60071F662 /* Machines */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76EC29C4AC590071F662 /* Detail */,
+				E33B76E229C3E9790071F662 /* Cell */,
+				E33B76D629C3E9080071F662 /* MachinesCoordinator.swift */,
+				E33B76D829C3E9140071F662 /* MachinesViewController.swift */,
+				E33B76DA29C3E91E0071F662 /* MachinesPresenter.swift */,
+				E33B76DC29C3E92B0071F662 /* MachinesProtocols.swift */,
+				E33B76DE29C3E9360071F662 /* MachinesRepository.swift */,
+				E33B76E029C3E9410071F662 /* MachinesRouter.swift */,
+			);
+			path = Machines;
+			sourceTree = "<group>";
+		};
+		E33B76E229C3E9790071F662 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76E329C3E9900071F662 /* MachineCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E33B76E729C3F1AE0071F662 /* Machines */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7315D29C77E0B00679CBE /* Detail */,
+				E33B76E829C3F1B40071F662 /* Doubles */,
+				E3B7314D29C76D0000679CBE /* MachinesCoordinatorTestCase.swift */,
+				E3B7315229C76ECD00679CBE /* MachinesPresenterTestCase.swift */,
+				E3B7315429C7716500679CBE /* MachinesRepositoryTestCase.swift */,
+				E3B7315629C7757E00679CBE /* MachinesRouterTestCase.swift */,
+				E3B7315829C7769E00679CBE /* MachinesViewControllerTestCase.swift */,
+			);
+			path = Machines;
+			sourceTree = "<group>";
+		};
+		E33B76E829C3F1B40071F662 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76E929C3F1C00071F662 /* MachinesDummy.swift */,
+				E33B76F829C4E31D0071F662 /* MachinesCoordinatorSpy.swift */,
+				E33B76FA29C4E3990071F662 /* MachinesPresenterSpy.swift */,
+				E33B76FC29C4E3EA0071F662 /* MachinesRepositoryInputSpy.swift */,
+				E33B76FE29C4E43C0071F662 /* MachinesRepositoryOutputSpy.swift */,
+				E3B7314B29C76C6900679CBE /* MachinesViewControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		E33B76EC29C4AC590071F662 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76ED29C4AC6B0071F662 /* MachineDetailCoordinator.swift */,
+				E33B76EF29C4AC7C0071F662 /* MachineDetailViewController.swift */,
+				E33B76F129C4AC860071F662 /* MachineDetailPresenter.swift */,
+				E33B76F329C4AC980071F662 /* MachineDetailProtocols.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E33B76F529C4CFBF0071F662 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76F629C4CFD00071F662 /* FavoriteTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E3ACA9E329BE57A60085F559 = {
+			isa = PBXGroup;
+			children = (
+				E3ACA9EE29BE57A60085F559 /* Nospresso */,
+				E3ACAA0829BE57A80085F559 /* NospressoTests */,
+				E3ACAA1229BE57A80085F559 /* NospressoUITests */,
+				E3ACA9ED29BE57A60085F559 /* Products */,
+				204069829C9B5CCE0641DEB3 /* Pods */,
+				9F3F0153498A8149AAB7B16B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E3ACA9ED29BE57A60085F559 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACA9EC29BE57A60085F559 /* Nospresso.app */,
+				E3ACAA0529BE57A80085F559 /* NospressoTests.xctest */,
+				E3ACAA0F29BE57A80085F559 /* NospressoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3ACA9EE29BE57A60085F559 /* Nospresso */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76D529C3E8F60071F662 /* Machines */,
+				E33B76BB29C39BBB0071F662 /* Accessories */,
+				E3FF11E529C0DEAA001A0925 /* Resources */,
+				E3FF11E029C0B3DA001A0925 /* Models */,
+				E3FF11D429BF8EFE001A0925 /* Coffees */,
+				E3FF11D229BF676E001A0925 /* Localizable.strings */,
+				E3FF11D029BF4FBF001A0925 /* R.generated.swift */,
+				E3ACAA3C29BE6A1F0085F559 /* Bag */,
+				E3ACAA3329BE688D0085F559 /* Favorites */,
+				E3ACAA3029BE63CA0085F559 /* TabBar */,
+				E3ACAA2D29BE5D9E0085F559 /* Protocols */,
+				E3ACAA2429BE5CA80085F559 /* MainMenu */,
+				E3ACA9EF29BE57A60085F559 /* AppDelegate.swift */,
+				E3ACA9F129BE57A60085F559 /* SceneDelegate.swift */,
+				E3ACA9FB29BE57A70085F559 /* Assets.xcassets */,
+				E3ACA9FD29BE57A70085F559 /* LaunchScreen.storyboard */,
+				E3ACAA0029BE57A70085F559 /* Info.plist */,
+				E3ACA9F829BE57A60085F559 /* Nospresso.xcdatamodeld */,
+			);
+			path = Nospresso;
+			sourceTree = "<group>";
+		};
+		E3ACAA0829BE57A80085F559 /* NospressoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7314F29C76D4200679CBE /* TestHelpers */,
+				E33B76E729C3F1AE0071F662 /* Machines */,
+				E33B76B729C398550071F662 /* Accessories */,
+				E3FF121529C0E6F7001A0925 /* Coffees */,
+				E3ACAA0929BE57A80085F559 /* NospressoTests.swift */,
+			);
+			path = NospressoTests;
+			sourceTree = "<group>";
+		};
+		E3ACAA1229BE57A80085F559 /* NospressoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACAA1329BE57A80085F559 /* NospressoUITests.swift */,
+				E3ACAA1529BE57A80085F559 /* NospressoUITestsLaunchTests.swift */,
+			);
+			path = NospressoUITests;
+			sourceTree = "<group>";
+		};
+		E3ACAA2429BE5CA80085F559 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACAA4529BE75300085F559 /* Views */,
+				E3ACAA2529BE5CB70085F559 /* MainMenuCoordinator.swift */,
+				E3ACAA2729BE5CCB0085F559 /* MainMenuPresenter.swift */,
+				E3ACAA2929BE5CD70085F559 /* MainMenuViewController.swift */,
+				E3ACAA2B29BE5CED0085F559 /* MainMenuProtocols.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		E3ACAA2D29BE5D9E0085F559 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACAA2E29BE5DAF0085F559 /* CodableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E3ACAA3029BE63CA0085F559 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACAA3129BE63E20085F559 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E3ACAA3329BE688D0085F559 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76F529C4CFBF0071F662 /* Cell */,
+				E3ACAA3429BE68A00085F559 /* FavoritesCoordinator.swift */,
+				E3ACAA3629BE68AD0085F559 /* FavoritesPresenter.swift */,
+				E3ACAA3829BE68BC0085F559 /* FavoritesViewController.swift */,
+				E3ACAA3A29BE68CB0085F559 /* FavoritesProtocols.swift */,
+				E33B76A329C22ECA0071F662 /* Favorites.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		E3ACAA3C29BE6A1F0085F559 /* Bag */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACAA3D29BE6A2E0085F559 /* BagCoordinator.swift */,
+				E3ACAA3F29BE6A380085F559 /* BagPresenter.swift */,
+				E3ACAA4129BE6A420085F559 /* BagViewController.swift */,
+				E3ACAA4329BE6A5B0085F559 /* BagProtocols.swift */,
+			);
+			path = Bag;
+			sourceTree = "<group>";
+		};
+		E3ACAA4529BE75300085F559 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3ACAA4629BE75500085F559 /* MenuItemButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E3B7314F29C76D4200679CBE /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7315029C76D5D00679CBE /* NavigationControllerSpy.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		E3B7315D29C77E0B00679CBE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7315E29C77E3600679CBE /* Doubles */,
+				E3B7316329C77FCB00679CBE /* MachineDetailCoordinatorTestCase.swift */,
+				E3B7316529C7804900679CBE /* MachineDetailPresenterTestCase.swift */,
+				E3B7316729C7817A00679CBE /* MachineDetailViewControllerTestCase.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E3B7315E29C77E3600679CBE /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7315F29C77E5900679CBE /* MachineDetailPresenterSpy.swift */,
+				E3B7316129C77F1200679CBE /* MachineDetailViewControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		E3B7317D29C7871300679CBE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7317E29C7871C00679CBE /* Doubles */,
+				E3B7318329C787AF00679CBE /* AccessoryDetailCoordinatorTestCase.swift */,
+				E3B7318529C787CA00679CBE /* AccessoryDetailPresenterTestCase.swift */,
+				E3B7318729C787E000679CBE /* AccessoryDetailViewControllerTestCase.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E3B7317E29C7871C00679CBE /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				E3B7317F29C7873400679CBE /* AccessoryDetailPresenterSpy.swift */,
+				E3B7318129C7874500679CBE /* AccessoryDetailViewControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		E3FF11D429BF8EFE001A0925 /* Coffees */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF121A29C0F487001A0925 /* Detail */,
+				E3FF11DD29BFAAB5001A0925 /* Cell */,
+				E3FF11D529BF8F13001A0925 /* CoffeesCoordinator.swift */,
+				E3FF11D729BF8F21001A0925 /* CoffeesPresenter.swift */,
+				E3FF11D929BF8F2E001A0925 /* CoffeesViewController.swift */,
+				E3FF11DB29BF8F3D001A0925 /* CoffeesProtocols.swift */,
+				E3FF122A29C20696001A0925 /* CoffeesRepository.swift */,
+				E33B76A729C240DB0071F662 /* CoffeesRouter.swift */,
+			);
+			path = Coffees;
+			sourceTree = "<group>";
+		};
+		E3FF11DD29BFAAB5001A0925 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF11DE29BFAAC8001A0925 /* CoffeeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E3FF11E029C0B3DA001A0925 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF11E129C0B3F1001A0925 /* Capsules.swift */,
+				E3FF122329C1F794001A0925 /* CoffeeDetail.swift */,
+				E33B76A529C22FA20071F662 /* Favorite.swift */,
+				E33B76B529C397120071F662 /* Accessories.swift */,
+				E33B76E529C3EC910071F662 /* Machines.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3FF11E529C0DEAA001A0925 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E33B76B429C265C90071F662 /* Views */,
+				E3FF121229C0E673001A0925 /* Extensions */,
+				E3FF11E629C0DEC0001A0925 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E3FF11E629C0DEC0001A0925 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF11E729C0DECC001A0925 /* OpenSans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E3FF11E729C0DECC001A0925 /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF11FF29C0DF29001A0925 /* LICENSE.txt */,
+				E3FF120029C0DF29001A0925 /* OpenSans-Bold.ttf */,
+				E3FF120229C0DF29001A0925 /* OpenSans-BoldItalic.ttf */,
+				E3FF120529C0DF29001A0925 /* OpenSans-ExtraBold.ttf */,
+				E3FF120429C0DF29001A0925 /* OpenSans-ExtraBoldItalic.ttf */,
+				E3FF11FE29C0DF29001A0925 /* OpenSans-Italic.ttf */,
+				E3FF11FC29C0DF29001A0925 /* OpenSans-Light.ttf */,
+				E3FF120129C0DF29001A0925 /* OpenSans-LightItalic.ttf */,
+				E3FF120329C0DF29001A0925 /* OpenSans-Regular.ttf */,
+				E3FF120629C0DF29001A0925 /* OpenSans-SemiBold.ttf */,
+				E3FF11FD29C0DF29001A0925 /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
+		E3FF121229C0E673001A0925 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF121329C0E680001A0925 /* Double.swift */,
+				E33B769F29C2262B0071F662 /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E3FF121529C0E6F7001A0925 /* Coffees */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF122529C1F84E001A0925 /* Detail */,
+				E3FF121629C0E709001A0925 /* Doubles */,
+				E3B7319329C78C1000679CBE /* CoffeesCoordinatorTestCase.swift */,
+				E3B7319529C78C2200679CBE /* CoffeesPresenterTestCase.swift */,
+				E3B7319729C78C3700679CBE /* CoffeesRepositoryTestCase.swift */,
+				E3B7319929C78C5600679CBE /* CoffeesRouterTestCase.swift */,
+				E3B7319B29C78C6800679CBE /* CoffeesViewControllerTestCase.swift */,
+			);
+			path = Coffees;
+			sourceTree = "<group>";
+		};
+		E3FF121629C0E709001A0925 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF121729C0E71B001A0925 /* CoffeeDummy.swift */,
+				E3B7318929C789A200679CBE /* CoffeesCoordinatorSpy.swift */,
+				E3B7318B29C789B200679CBE /* CoffeesPresenterSpy.swift */,
+				E3B7318D29C789C200679CBE /* CoffeesRepositoryInputSpy.swift */,
+				E3B7318F29C789DB00679CBE /* CoffeesRepositoryOutputSpy.swift */,
+				E3B7319129C789FB00679CBE /* CoffeesViewControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		E3FF121A29C0F487001A0925 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF121B29C0F49B001A0925 /* CoffeeDetailCoordinator.swift */,
+				E3FF121D29C0F4A7001A0925 /* CoffeeDetailPresenter.swift */,
+				E3FF121F29C0F4BA001A0925 /* CoffeeDetailViewController.swift */,
+				E3FF122129C0F4C7001A0925 /* CoffeDetailProtocols.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E3FF122529C1F84E001A0925 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF122629C1F854001A0925 /* Doubles */,
+				E3B731A129C7906400679CBE /* CoffeeDetailCoordinatorTest.swift */,
+				E3B731A329C7907600679CBE /* CoffeeDetailPresenterTestCase.swift */,
+				E3B731A529C7908900679CBE /* CoffeeDetailViewControllerTestCase.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E3FF122629C1F854001A0925 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF122729C1F865001A0925 /* CoffeeDetailDummy.swift */,
+				E3B7319D29C78FDD00679CBE /* CoffeeDetailPresenterSpy.swift */,
+				E3B7319F29C78FEE00679CBE /* CoffeeDetailViewControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3ACA9EB29BE57A60085F559 /* Nospresso */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3ACAA1929BE57A80085F559 /* Build configuration list for PBXNativeTarget "Nospresso" */;
+			buildPhases = (
+				40ECC188C61F19495F91F87D /* [CP] Check Pods Manifest.lock */,
+				E3FF11CF29BF4C32001A0925 /* R.Swift */,
+				E3ACA9E829BE57A60085F559 /* Sources */,
+				E3ACA9E929BE57A60085F559 /* Frameworks */,
+				E3ACA9EA29BE57A60085F559 /* Resources */,
+				1356411164A1E5560282BE4D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nospresso;
+			productName = Nospresso;
+			productReference = E3ACA9EC29BE57A60085F559 /* Nospresso.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3ACAA0429BE57A80085F559 /* NospressoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3ACAA1C29BE57A80085F559 /* Build configuration list for PBXNativeTarget "NospressoTests" */;
+			buildPhases = (
+				1FB3E8016C52E8C81A6783B1 /* [CP] Check Pods Manifest.lock */,
+				E3ACAA0129BE57A80085F559 /* Sources */,
+				E3ACAA0229BE57A80085F559 /* Frameworks */,
+				E3ACAA0329BE57A80085F559 /* Resources */,
+				CA74A15CF273932038167201 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3ACAA0729BE57A80085F559 /* PBXTargetDependency */,
+			);
+			name = NospressoTests;
+			productName = NospressoTests;
+			productReference = E3ACAA0529BE57A80085F559 /* NospressoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E3ACAA0E29BE57A80085F559 /* NospressoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3ACAA1F29BE57A80085F559 /* Build configuration list for PBXNativeTarget "NospressoUITests" */;
+			buildPhases = (
+				0A54B54E0654A12AEEB142E9 /* [CP] Check Pods Manifest.lock */,
+				E3ACAA0B29BE57A80085F559 /* Sources */,
+				E3ACAA0C29BE57A80085F559 /* Frameworks */,
+				E3ACAA0D29BE57A80085F559 /* Resources */,
+				600B9014DE20B2FD842C0F25 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3ACAA1129BE57A80085F559 /* PBXTargetDependency */,
+			);
+			name = NospressoUITests;
+			productName = NospressoUITests;
+			productReference = E3ACAA0F29BE57A80085F559 /* NospressoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3ACA9E429BE57A60085F559 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					E3ACA9EB29BE57A60085F559 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					E3ACAA0429BE57A80085F559 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E3ACA9EB29BE57A60085F559;
+					};
+					E3ACAA0E29BE57A80085F559 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E3ACA9EB29BE57A60085F559;
+					};
+				};
+			};
+			buildConfigurationList = E3ACA9E729BE57A60085F559 /* Build configuration list for PBXProject "Nospresso" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3ACA9E329BE57A60085F559;
+			productRefGroup = E3ACA9ED29BE57A60085F559 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3ACA9EB29BE57A60085F559 /* Nospresso */,
+				E3ACAA0429BE57A80085F559 /* NospressoTests */,
+				E3ACAA0E29BE57A80085F559 /* NospressoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3ACA9EA29BE57A60085F559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3ACA9FF29BE57A70085F559 /* LaunchScreen.storyboard in Resources */,
+				E3FF120E29C0DF29001A0925 /* OpenSans-Regular.ttf in Resources */,
+				E3FF121129C0DF29001A0925 /* OpenSans-SemiBold.ttf in Resources */,
+				E3FF11D329BF676E001A0925 /* Localizable.strings in Resources */,
+				E3FF120B29C0DF29001A0925 /* OpenSans-Bold.ttf in Resources */,
+				E3FF120729C0DF29001A0925 /* OpenSans-Light.ttf in Resources */,
+				E3FF120D29C0DF29001A0925 /* OpenSans-BoldItalic.ttf in Resources */,
+				E3FF120929C0DF29001A0925 /* OpenSans-Italic.ttf in Resources */,
+				E3FF120F29C0DF29001A0925 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				E3ACA9FC29BE57A70085F559 /* Assets.xcassets in Resources */,
+				E3FF120829C0DF29001A0925 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				E3FF120A29C0DF29001A0925 /* LICENSE.txt in Resources */,
+				E3FF120C29C0DF29001A0925 /* OpenSans-LightItalic.ttf in Resources */,
+				E3FF121029C0DF29001A0925 /* OpenSans-ExtraBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3ACAA0329BE57A80085F559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3ACAA0D29BE57A80085F559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A54B54E0654A12AEEB142E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nospresso-NospressoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1356411164A1E5560282BE4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso/Pods-Nospresso-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso/Pods-Nospresso-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nospresso/Pods-Nospresso-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FB3E8016C52E8C81A6783B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NospressoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40ECC188C61F19495F91F87D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nospresso-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		600B9014DE20B2FD842C0F25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA74A15CF273932038167201 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NospressoTests/Pods-NospressoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NospressoTests/Pods-NospressoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NospressoTests/Pods-NospressoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3FF11CF29BF4C32001A0925 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3ACA9E829BE57A60085F559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33B76C929C39C260071F662 /* AccessoryTableViewCell.swift in Sources */,
+				E33B76DD29C3E92B0071F662 /* MachinesProtocols.swift in Sources */,
+				E33B76F729C4CFD00071F662 /* FavoriteTableViewCell.swift in Sources */,
+				E33B76EB29C3F1C40071F662 /* MachinesDummy.swift in Sources */,
+				E33B76D029C3AC5B0071F662 /* AccessoryDetailPresenter.swift in Sources */,
+				E3FF11DA29BF8F2E001A0925 /* CoffeesViewController.swift in Sources */,
+				E3FF121929C0E8A9001A0925 /* CoffeeDummy.swift in Sources */,
+				E3ACAA2C29BE5CED0085F559 /* MainMenuProtocols.swift in Sources */,
+				E33B76A029C2262B0071F662 /* UIImageView.swift in Sources */,
+				E3ACAA2629BE5CB70085F559 /* MainMenuCoordinator.swift in Sources */,
+				E33B76F029C4AC7C0071F662 /* MachineDetailViewController.swift in Sources */,
+				E33B76E429C3E9900071F662 /* MachineCollectionViewCell.swift in Sources */,
+				E3FF122029C0F4BA001A0925 /* CoffeeDetailViewController.swift in Sources */,
+				E33B76E629C3EC910071F662 /* Machines.swift in Sources */,
+				E33B76E129C3E9410071F662 /* MachinesRouter.swift in Sources */,
+				E33B76D229C3AC650071F662 /* AccessoryDetailViewController.swift in Sources */,
+				E33B76A829C240DB0071F662 /* CoffeesRouter.swift in Sources */,
+				E33B76DB29C3E91E0071F662 /* MachinesPresenter.swift in Sources */,
+				E3ACAA4029BE6A380085F559 /* BagPresenter.swift in Sources */,
+				E3FF121429C0E680001A0925 /* Double.swift in Sources */,
+				E33B76C329C39BF90071F662 /* AccessoriesProtocols.swift in Sources */,
+				E3FF122229C0F4C7001A0925 /* CoffeDetailProtocols.swift in Sources */,
+				E33B76BF29C39BDD0071F662 /* AccessoriesPresenter.swift in Sources */,
+				E33B76DF29C3E9360071F662 /* MachinesRepository.swift in Sources */,
+				E33B76A429C22ECA0071F662 /* Favorites.swift in Sources */,
+				E3FF122429C1F795001A0925 /* CoffeeDetail.swift in Sources */,
+				E33B76EE29C4AC6B0071F662 /* MachineDetailCoordinator.swift in Sources */,
+				E3ACAA3229BE63E20085F559 /* TabBarController.swift in Sources */,
+				E3ACAA3729BE68AD0085F559 /* FavoritesPresenter.swift in Sources */,
+				E3FF11DC29BF8F3D001A0925 /* CoffeesProtocols.swift in Sources */,
+				E3ACAA2829BE5CCB0085F559 /* MainMenuPresenter.swift in Sources */,
+				E3FF11D129BF4FBF001A0925 /* R.generated.swift in Sources */,
+				E33B76C729C39C110071F662 /* AccessoriesRouter.swift in Sources */,
+				E3ACAA3E29BE6A2E0085F559 /* BagCoordinator.swift in Sources */,
+				E3ACAA3529BE68A00085F559 /* FavoritesCoordinator.swift in Sources */,
+				E33B76D929C3E9140071F662 /* MachinesViewController.swift in Sources */,
+				E3ACAA3B29BE68CB0085F559 /* FavoritesProtocols.swift in Sources */,
+				E3FF11D629BF8F13001A0925 /* CoffeesCoordinator.swift in Sources */,
+				E3ACAA4429BE6A5B0085F559 /* BagProtocols.swift in Sources */,
+				E3ACA9F029BE57A60085F559 /* AppDelegate.swift in Sources */,
+				E33B76A629C22FA20071F662 /* Favorite.swift in Sources */,
+				E33B76F429C4AC980071F662 /* MachineDetailProtocols.swift in Sources */,
+				E3FF121E29C0F4A7001A0925 /* CoffeeDetailPresenter.swift in Sources */,
+				E3FF11DF29BFAAC8001A0925 /* CoffeeTableViewCell.swift in Sources */,
+				E3FF11D829BF8F21001A0925 /* CoffeesPresenter.swift in Sources */,
+				E33B76AD29C24F890071F662 /* LoadingViewController.swift in Sources */,
+				E33B76C129C39BEC0071F662 /* AccessoriesViewController.swift in Sources */,
+				E3FF11E229C0B3F1001A0925 /* Capsules.swift in Sources */,
+				E33B76D729C3E9080071F662 /* MachinesCoordinator.swift in Sources */,
+				E33B76AA29C24EA30071F662 /* Loading.swift in Sources */,
+				E3ACAA2A29BE5CD70085F559 /* MainMenuViewController.swift in Sources */,
+				E33B76C529C39C060071F662 /* AccessoriesRepository.swift in Sources */,
+				E33B76BD29C39BCF0071F662 /* AccessoriesCoordinator.swift in Sources */,
+				E33B76F229C4AC860071F662 /* MachineDetailPresenter.swift in Sources */,
+				E33B76CB29C3A07B0071F662 /* AccessoriesDummy.swift in Sources */,
+				E3FF122B29C20696001A0925 /* CoffeesRepository.swift in Sources */,
+				E3ACAA4229BE6A420085F559 /* BagViewController.swift in Sources */,
+				E33B76B629C397120071F662 /* Accessories.swift in Sources */,
+				E3FF122929C1F86B001A0925 /* CoffeeDetailDummy.swift in Sources */,
+				E3ACA9FA29BE57A60085F559 /* Nospresso.xcdatamodeld in Sources */,
+				E3FF121C29C0F49B001A0925 /* CoffeeDetailCoordinator.swift in Sources */,
+				E3ACA9F229BE57A60085F559 /* SceneDelegate.swift in Sources */,
+				E33B76CE29C3AC490071F662 /* AccessoryDetailCoordinator.swift in Sources */,
+				E33B76D429C3AC6F0071F662 /* AccessoryDetailProtocols.swift in Sources */,
+				E3ACAA4729BE75500085F559 /* MenuItemButton.swift in Sources */,
+				E3ACAA3929BE68BC0085F559 /* FavoritesViewController.swift in Sources */,
+				E3ACAA2F29BE5DAF0085F559 /* CodableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3ACAA0129BE57A80085F559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3B7315129C76D5D00679CBE /* NavigationControllerSpy.swift in Sources */,
+				E3B7318E29C789C200679CBE /* CoffeesRepositoryInputSpy.swift in Sources */,
+				E3B7319229C789FB00679CBE /* CoffeesViewControllerSpy.swift in Sources */,
+				E3B7319A29C78C5600679CBE /* CoffeesRouterTestCase.swift in Sources */,
+				E3B731A029C78FEE00679CBE /* CoffeeDetailViewControllerSpy.swift in Sources */,
+				E3B7316229C77F1200679CBE /* MachineDetailViewControllerSpy.swift in Sources */,
+				E3B731A229C7906400679CBE /* CoffeeDetailCoordinatorTest.swift in Sources */,
+				E3B7317029C7827500679CBE /* AccessoriesRepositoryOutputSpy.swift in Sources */,
+				E3FF121829C0E71B001A0925 /* CoffeeDummy.swift in Sources */,
+				E3B7316629C7804900679CBE /* MachineDetailPresenterTestCase.swift in Sources */,
+				E3B7315929C7769E00679CBE /* MachinesViewControllerTestCase.swift in Sources */,
+				E3B7318429C787AF00679CBE /* AccessoryDetailCoordinatorTestCase.swift in Sources */,
+				E3B7316C29C7824F00679CBE /* AccessoriesPresenterSpy.swift in Sources */,
+				E33B76B929C398650071F662 /* AccessoriesDummy.swift in Sources */,
+				E3B731A629C7908900679CBE /* CoffeeDetailViewControllerTestCase.swift in Sources */,
+				E3B7316829C7817A00679CBE /* MachineDetailViewControllerTestCase.swift in Sources */,
+				E3B7317629C783F000679CBE /* AccessoriesPresenterTestCase.swift in Sources */,
+				E3B7319829C78C3700679CBE /* CoffeesRepositoryTestCase.swift in Sources */,
+				E3B7318629C787CA00679CBE /* AccessoryDetailPresenterTestCase.swift in Sources */,
+				E3B7316029C77E5900679CBE /* MachineDetailPresenterSpy.swift in Sources */,
+				E33B76EA29C3F1C00071F662 /* MachinesDummy.swift in Sources */,
+				E3B7315529C7716500679CBE /* MachinesRepositoryTestCase.swift in Sources */,
+				E3B7315729C7757E00679CBE /* MachinesRouterTestCase.swift in Sources */,
+				E3B7316429C77FCB00679CBE /* MachineDetailCoordinatorTestCase.swift in Sources */,
+				E3B7314E29C76D0000679CBE /* MachinesCoordinatorTestCase.swift in Sources */,
+				E3B7318029C7873400679CBE /* AccessoryDetailPresenterSpy.swift in Sources */,
+				E3B7318C29C789B200679CBE /* CoffeesPresenterSpy.swift in Sources */,
+				E3ACAA0A29BE57A80085F559 /* NospressoTests.swift in Sources */,
+				E3B7319029C789DB00679CBE /* CoffeesRepositoryOutputSpy.swift in Sources */,
+				E3B7317229C7828800679CBE /* AccessoriesViewControllerSpy.swift in Sources */,
+				E3B7316A29C7823A00679CBE /* AccessoriesCoordinatorSpy.swift in Sources */,
+				E3B7315329C76ECD00679CBE /* MachinesPresenterTestCase.swift in Sources */,
+				E33B76FB29C4E3990071F662 /* MachinesPresenterSpy.swift in Sources */,
+				E3B7317429C783E000679CBE /* AccessoriesCoordinatorTestCase.swift in Sources */,
+				E3FF122829C1F865001A0925 /* CoffeeDetailDummy.swift in Sources */,
+				E33B76FD29C4E3EA0071F662 /* MachinesRepositoryInputSpy.swift in Sources */,
+				E3B7318A29C789A200679CBE /* CoffeesCoordinatorSpy.swift in Sources */,
+				E3B7319E29C78FDD00679CBE /* CoffeeDetailPresenterSpy.swift in Sources */,
+				E3B7317829C783FF00679CBE /* AccessoriesRepositoryTestCase.swift in Sources */,
+				E3B7318829C787E000679CBE /* AccessoryDetailViewControllerTestCase.swift in Sources */,
+				E3B7319C29C78C6800679CBE /* CoffeesViewControllerTestCase.swift in Sources */,
+				E33B76F929C4E31D0071F662 /* MachinesCoordinatorSpy.swift in Sources */,
+				E3B7319629C78C2200679CBE /* CoffeesPresenterTestCase.swift in Sources */,
+				E33B76FF29C4E43C0071F662 /* MachinesRepositoryOutputSpy.swift in Sources */,
+				E3B7317C29C7841D00679CBE /* AccessoriesViewControllerTestCase.swift in Sources */,
+				E3B7317A29C7840D00679CBE /* AccessoriesRouterTestCase.swift in Sources */,
+				E3B7318229C7874500679CBE /* AccessoryDetailViewControllerSpy.swift in Sources */,
+				E3B7316E29C7826400679CBE /* AccessoriesRepositoryInputSpy.swift in Sources */,
+				E3B731A429C7907700679CBE /* CoffeeDetailPresenterTestCase.swift in Sources */,
+				E3B7319429C78C1000679CBE /* CoffeesCoordinatorTestCase.swift in Sources */,
+				E3B7314C29C76C6900679CBE /* MachinesViewControllerSpy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3ACAA0B29BE57A80085F559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3ACAA1429BE57A80085F559 /* NospressoUITests.swift in Sources */,
+				E3ACAA1629BE57A80085F559 /* NospressoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3ACAA0729BE57A80085F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3ACA9EB29BE57A60085F559 /* Nospresso */;
+			targetProxy = E3ACAA0629BE57A80085F559 /* PBXContainerItemProxy */;
+		};
+		E3ACAA1129BE57A80085F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3ACA9EB29BE57A60085F559 /* Nospresso */;
+			targetProxy = E3ACAA1029BE57A80085F559 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3ACA9FD29BE57A70085F559 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3ACA9FE29BE57A70085F559 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3ACAA1729BE57A80085F559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E3ACAA1829BE57A80085F559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3ACAA1A29BE57A80085F559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF6A58EDD6A6CEAAFAB80E2 /* Pods-Nospresso.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nospresso/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fabricio.Nospresso;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3ACAA1B29BE57A80085F559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36D37FBD5A3C948813FBFB2E /* Pods-Nospresso.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nospresso/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fabricio.Nospresso;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E3ACAA1D29BE57A80085F559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93D0D004C4C6AD74F87086C /* Pods-NospressoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fabricio.NospressoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nospresso.app/Nospresso";
+			};
+			name = Debug;
+		};
+		E3ACAA1E29BE57A80085F559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA36467E9E368DFF332EDE21 /* Pods-NospressoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fabricio.NospressoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nospresso.app/Nospresso";
+			};
+			name = Release;
+		};
+		E3ACAA2029BE57A80085F559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF17D5A646638EFD0521A0D7 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fabricio.NospressoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nospresso;
+			};
+			name = Debug;
+		};
+		E3ACAA2129BE57A80085F559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5B2906C7AF1C6938A23CEED /* Pods-Nospresso-NospressoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fabricio.NospressoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nospresso;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3ACA9E729BE57A60085F559 /* Build configuration list for PBXProject "Nospresso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3ACAA1729BE57A80085F559 /* Debug */,
+				E3ACAA1829BE57A80085F559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3ACAA1929BE57A80085F559 /* Build configuration list for PBXNativeTarget "Nospresso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3ACAA1A29BE57A80085F559 /* Debug */,
+				E3ACAA1B29BE57A80085F559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3ACAA1C29BE57A80085F559 /* Build configuration list for PBXNativeTarget "NospressoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3ACAA1D29BE57A80085F559 /* Debug */,
+				E3ACAA1E29BE57A80085F559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3ACAA1F29BE57A80085F559 /* Build configuration list for PBXNativeTarget "NospressoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3ACAA2029BE57A80085F559 /* Debug */,
+				E3ACAA2129BE57A80085F559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E3ACA9F829BE57A60085F559 /* Nospresso.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E3ACA9F929BE57A60085F559 /* Nospresso.xcdatamodel */,
+			);
+			currentVersion = E3ACA9F929BE57A60085F559 /* Nospresso.xcdatamodel */;
+			path = Nospresso.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E3ACA9E429BE57A60085F559 /* Project object */;
+}

@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Nuke (10.7.1)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - SnapKit (5.0.1)
+  - SnapshotTesting (1.8.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2.2)
+  - Nuke
+  - R.swift (~> 5.2.2)
+  - SnapKit (~> 5.0.1)
+  - SnapshotTesting (~> 1.8.2)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Nuke
+    - R.swift
+    - R.swift.Library
+    - SnapKit
+    - SnapshotTesting
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Nuke: 279f17a599fd1c83cf51de5e0e1f2db143a287b0
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
+
+PODFILE CHECKSUM: 56d32e5948b3b83c0f3f15ebc00594a3e51622e6
+
+COCOAPODS: 1.11.3

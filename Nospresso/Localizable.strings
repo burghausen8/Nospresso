@@ -1,0 +1,42 @@
+/*
+ Main Menu
+ */
+"MainMenuCoffeeButton.subtitle" = "Cremosos, espumosos, hmm";
+"MainMenuMachinesButton.title" = "Máquinas";
+"MainMenuMachinesButton.subtitle" = "Sem elas não rola café";
+"MainMenuAccessoriesButton.title" = "Acessórios";
+"MainMenuAccessoriesButton.subtitle" = "Para completar a balaca";
+
+/*
+ CoffeeTableViewCell
+ */
+"CoffeTableViewCell.intensity" = "Intensidade %@";
+
+/*
+ CoffeeDetail
+ */
+"CoffeeDetail.intensity" = "Intensidade: %@";
+"CoffeeDetail.capsules" = "%@ Capsulas,";
+"CoffeeDetail.origin" = "Origem";
+"CoffeeDetail.roasting" = "Torrefação";
+"CoffeeDetail.perfil" = "Perfil Aromático";
+
+/*
+ Accessories
+ */
+"Accessories.title" = "Acessórios";
+
+/*
+ Favorites
+ */
+"Favorites.nothing" = "Nenhum item favoritado :(";
+
+/*
+ Geral
+ */
+"Oba" = "Oba!";
+"AlertViewMessage" = "Produto adicionado a sacola!";
+"Continue" = "Continuar";
+"AddToBag" = "Adicionar à sacola";
+"Coffee" = "Cafés";
+"Machines" = "Máquinas";
