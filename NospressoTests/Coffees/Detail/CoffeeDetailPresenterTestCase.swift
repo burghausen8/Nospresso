@@ -29,17 +29,6 @@ class CoffeeDetailPresenterTestCase: XCTestCase {
         XCTAssertTrue(viewSpy.setupCalled)
     }
     
-    func test_bagButtonTapped_shouldCallShowAllert() throws {
-        // Given
-        setupSut()
-        
-        // When
-        sut.bagButtonTapped()
-        
-        // Then
-        XCTAssert(viewSpy.showAlertCalled)
-    }
-    
     func setupSut() {
         sut = .init(coffee: CoffeeDetailResponse.dummy().coffees[0])
         sut.view = viewSpy

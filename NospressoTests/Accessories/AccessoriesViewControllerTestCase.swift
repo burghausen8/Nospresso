@@ -21,7 +21,7 @@ class AccessoriesViewControllerTestCase: XCTestCase {
     }
     
     func test_view_withItems_shouldMatchSnapshot() throws {
-        sut.presenter?.getAccessoriesSucceeded(.dummy())
+        sut.presenter?.getAccessoriesSucceeded(Acessories.dummy())
         
         assertSnapshot(matching: navigationController, as: .image)
     }

@@ -18,14 +18,15 @@ internal class MenuItemButton: UIView {
     
     private lazy var titleLabel: UILabel = {
         let title = UILabel()
-        title.font = UIFont(name: "OpenSans-Bold", size: 26)
+        title.font = Fonts.get(type: .Bold, size: 26)
+        title.textColor = .black
         
         return title
     }()
     
     private lazy var subtitleLabel: UILabel = {
         let subtitle = UILabel()
-        subtitle.font = UIFont(name: "OpenSans-Light", size: 14)
+        subtitle.font = Fonts.get(type: .Light, size: 14)
         subtitle.textColor = .gray
         
         return subtitle

@@ -10,7 +10,7 @@ class AccessoryDetailViewControllerTestCase: XCTestCase {
     override func setUp() {
         isRecording = false
         
-        let presenter = AccessoryDetailPresenter(accessory: AccessoriesResponse.dummy().accessories[0].items[0])
+        let presenter = AccessoryDetailPresenter(accessory: Acessories.dummy()[0].items[0])
         
         sut = .init()
         sut.presenter = presenter

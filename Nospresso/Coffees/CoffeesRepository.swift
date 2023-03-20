@@ -3,14 +3,12 @@ import Foundation
 internal class CoffeesRepository {
     
     private weak var output: CoffeesRepositoryOutputProtocol?
+    private var apiClient: API
     
-    internal init(output: CoffeesRepositoryOutputProtocol
+    internal init(output: CoffeesRepositoryOutputProtocol, apiclient: API = .init()
     ) {
         self.output = output
-    }
-    
-    private func getRouter(id: Int) -> CoffeesRouter {
-        return .coffeeDetail(id: id)
+        self.apiClient = apiclient
     }
     
 }
@@ -19,38 +17,34 @@ extension CoffeesRepository: CoffeesRepositoryInputProtocol {
     
     internal func getCoffeeDetail(id: Int) {
         
-        //TODO: comentado, pois precisa de um back para funcionar, estou mockando os resultados para poder ver as telas
-        if let coffeeDetails = CoffeeDetailResponse.dummy().coffees.first(where: {$0.id == id}) {
-            self.output?.getCoffeeDetailSucceeded(coffeeDetails)
+        apiClient.request(endpoint: .coffeeDetail(id: id)) { [weak self] (coffeeDetail: CoffeeDetail) in
+            guard let self = self else { return }
+
+            self.output?.getCoffeeDetailSucceeded(coffeeDetail)
+        } failure: { [weak self] (error) in
+            self?.output?.getCoffeeDetailFailed()
         }
-        //        apiClient.requestJSON(urlRequest: self.getRouter(id: id)) { [weak self] (result: Result<CoffeeDetailResponse>) in
-        //                switch result {
-        //                case .success(let data):
-        //                    self?.output?.getCoffeDetailSucceeded(data.coffees)
-        //                case .error(let error):
-        //                    self?.output?.getCoffeeDetailFailed(error.message)
-        //                }
-        //            }
     }
     
     internal func getCapsules() {
         
-        //TODO: comentado, pois precisa de um back para funcionar, estou mockando os resultados para poder ver as telas
-        //timer apenas apra ver o loading funcionando
-        let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(sendCapsules), userInfo: nil, repeats: false)
+        apiClient.request(endpoint: .capsules) { [weak self] (capsules: [Capsules]) in
+            guard let self = self else { return }
+
+            self.output?.getCapsulesSucceeded(capsules)
+        } failure: { [weak self] (error) in
+            self?.output?.getCapsulesFailed()
+        }
+        
     }
     
-    @objc internal func sendCapsules() {
-        self.output?.getCapsulesSucceeded(CapsulesResponse.dummy())
+    internal func addToBag(with bag: Bag) {
+        
+        apiClient.request(endpoint: .bag, method: .post, objetct: bag) { [weak self] (retorno: Bag) in
+            self?.output?.addToBagSucceeded()
+        } failure: { (erro) in
+            self.output?.addToBagFailed()
+        }
+        
     }
-    
-    //        apiClient.requestJSON(urlRequest: self.getRouter(id: id)) { [weak self] (result: Result<CoffeeDetailResponse>) in
-    //                switch result {
-    //                case .success(let data):
-    //                    self?.output?.getCoffeDetailSucceeded(data.coffees)
-    //                case .error(let error):
-    //                    self?.output?.getCoffeeDetailFailed(error.message)
-    //                }
-    //            }
-    
 }

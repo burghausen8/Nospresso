@@ -1,9 +1,9 @@
 import Foundation
 
 enum TypeProduct: String, Codable {
-    case machine = "MÁQUINAS"
-    case coffee = "CAFÉS"
-    case accessory = "ACESSÓRIOS"
+    case machine = "maquina"
+    case coffee = "cafe"
+    case accessory = "acessorio"
 }
 
 internal struct Favorite: Codable {

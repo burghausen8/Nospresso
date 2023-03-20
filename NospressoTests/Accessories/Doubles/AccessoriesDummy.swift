@@ -1,10 +1,10 @@
 @testable import Nospresso
 import Foundation
 
-extension AccessoriesResponse {
+extension Acessories {
     
-    static func dummy() -> AccessoriesResponse {
-        return .init(accessories: [Acessories(category: "Xícaras e Copos",
+    static func dummy() -> [Acessories] {
+        return .init([Acessories(category: "Xícaras e Copos",
                                               items: [Item(id: 1,
                                                            name: "Xícaras ORIGINS Espresso",
                                                            description: "As xícaras da coleção Origins são feitas de porcelana com camada dupla, desenhadas pela renomada designer internacional India Mahdavi. A sua forma é inspirada num grão de café, com o exterior branco fosco e um interior colorido envernizado.",

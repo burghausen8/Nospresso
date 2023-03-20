@@ -25,13 +25,15 @@ internal protocol MachinesViewControllerProtocol {
     func reloadData()
     func showLoad()
     func hideLoad()
+    func showError()
+    func hideError()
     
 }
 
 // Repository -> Presenter
 internal protocol MachinesRepositoryOutputProtocol: AnyObject {
     
-    func getMachinesSucceeded(_ data: MachinesResponse)
-    func getMachinesFailed(_ errorMessage: String)
+    func getMachinesSucceeded(_ data: [Machine])
+    func getMachinesFailed()
     
 }

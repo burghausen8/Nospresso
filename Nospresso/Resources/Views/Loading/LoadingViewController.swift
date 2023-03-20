@@ -5,7 +5,7 @@ class LoadingViewController: UIViewController {
     class func doNib() -> LoadingViewController {
         let imageView: UIImageView = {
             let imageView = UIImageView()
-            imageView.image = UIImage(named:"loader")
+            imageView.image = Images.loader()
             
             return imageView
         }()

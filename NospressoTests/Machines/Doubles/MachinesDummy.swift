@@ -1,10 +1,10 @@
 @testable import Nospresso
 import Foundation
 
-extension MachinesResponse {
+extension Machine {
     
-    static func dummy() -> MachinesResponse {
-        return .init(machines: [Machine(id: 1,
+    static func dummy() -> [Machine] {
+        return .init([Machine(id: 1,
                                         name: "Inissia",
                                         description: "Premiada por seu compacto design, a Inissia está aqui para garantir que a sua xícara de café seja prática, sem deixar nada fora do lugar.",
                                         unitValue: 499,

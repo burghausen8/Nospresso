@@ -1,15 +1,5 @@
 import Foundation
 
-internal struct AccessoriesResponse: Codable {
-    
-    internal let accessories: [Acessories]
-    
-    internal enum CodingKeys: String, CodingKey {
-        case accessories = "acessorios"
-    }
-    
-}
-
 internal struct Acessories: Codable {
     
     internal let category: String
@@ -35,7 +25,7 @@ internal struct Item: Codable {
         case id = "id"
         case name = "nome"
         case description = "descricao"
-        case unitValue = "precoUnitario"
+        case unitValue = "preco"
         case image = "imagem"
     }
 }
@@ -50,5 +40,16 @@ extension Item {
                         type: .accessory
         )
     }
+    func mapToBag() -> Bag {
+        return Bag(id: Int.random(in: 0..<100000),
+                   originalId: id,
+                   name: name,
+                   description: description ?? "",
+                   unitValue: unitValue,
+                   image: image,
+                   type: .accessory
+        )
+    }
+    
 }
 

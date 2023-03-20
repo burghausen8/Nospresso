@@ -7,7 +7,7 @@ public extension UIImageView {
         guard let url = URL(string: url) else { return }
         
         Nuke.loadImage(with: url,
-                       options: ImageLoadingOptions(placeholder: UIImage(named:"loader")),
+                       options: ImageLoadingOptions(placeholder: Images.loader()),
                        into: self)
     }
     

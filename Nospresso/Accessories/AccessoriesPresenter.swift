@@ -13,6 +13,20 @@ internal class AccessoriesPresenter: NSObject {
         super.init()
     }
     
+    private func createAlertView(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert
+        )
+        alert.addAction(UIAlertAction(title: Strings.continue(),
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil
+                                     )
+        )
+        
+        return alert
+    }
+    
 }
 
 // MARK: AccessoriesPresenterProtocol
@@ -47,10 +61,10 @@ extension AccessoriesPresenter: UITableViewDataSource {
         return nil
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = R.color.headerTableView()
+        view.tintColor = Colors.headerTableView()
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = .black
-        header.textLabel?.font = UIFont(name: "OpenSans-Italic", size: 21)
+        header.textLabel?.font = Fonts.get(type: .Italic, size: 21)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
@@ -81,34 +95,40 @@ extension AccessoriesPresenter: UITableViewDataSource {
 //MARK: AccessoriesRepositoryOutputProtocol
 extension AccessoriesPresenter : AccessoriesRepositoryOutputProtocol {
     
-    func getAccessoriesSucceeded(_ data: AccessoriesResponse) {
-        view?.hideLoad()
-        self.accessories = data.accessories
-        view?.reloadData()
+    func getAccessoriesSucceeded(_ data: [Acessories]) {
+        self.accessories = data
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            self.view?.reloadData()
+        }
     }
     
-    func getAccessoriesFailed(_ errorMessage: String) {
+    func getAccessoriesFailed() {
         view?.hideLoad()
-        print(errorMessage)
+    }
+    
+    func addToBagSucceeded() {
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            let alert = self.createAlertView(title: Strings.oba(), message: Strings.alertViewMessage())
+            self.view?.showAlert(with: alert)
+        }
+    }
+    
+    func addToBagFailed() {
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            let alert = self.createAlertView(title: Strings.alertViewMessageTitleError(), message: Strings.alertViewMessageError())
+            self.view?.showAlert(with: alert)
+        }
     }
     
 }
 
 extension AccessoriesPresenter: AccessoryTableViewCellDelegate {
-    
-    func bagButtonTapped() {
-        let alert = UIAlertController(title: R.string.localizable.oba(),
-                                      message: R.string.localizable.alertViewMessage(),
-                                      preferredStyle: UIAlertController.Style.alert
-        )
-        alert.addAction(UIAlertAction(title: R.string.localizable.continue(),
-                                      style: UIAlertAction.Style.default,
-                                      handler: nil
-                                     )
-        )
-        view?.showAlert(with: alert)
-        
-        //TODO: como não tem back, a sacola não funcionará, apenas aparecerá um alert na tela
+
+    func bagButtonTapped(with bag: Bag) {
+        repository?.addToBag(with: bag)
     }
     
 }

@@ -17,14 +17,16 @@ internal class FavoritesViewController: UIViewController {
         let tableView = UITableView()
         tableView.layoutMargins = .zero
         tableView.separatorInset = .zero
+        tableView.backgroundColor = .white
         
         return tableView
     }()
     
     internal let nothingFavoritedLabel: UILabel = {
         let label = UILabel()
-        label.text = R.string.localizable.favoritesNothing()
+        label.text = Strings.favoritesNothing()
         label.textAlignment = .center
+        label.textColor = .black
         
         return label
     }()

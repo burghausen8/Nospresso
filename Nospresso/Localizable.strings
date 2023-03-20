@@ -32,10 +32,17 @@
 "Favorites.nothing" = "Nenhum item favoritado :(";
 
 /*
+ Sacola
+ */
+"Bags.nothing" = "Nenhum item na sacola :(";
+
+/*
  Geral
  */
 "Oba" = "Oba!";
 "AlertViewMessage" = "Produto adicionado a sacola!";
+"AlertViewMessageTitleError" = "Ocorreu um erro";
+"AlertViewMessageError" = "Tente novamente mais tarde";
 "Continue" = "Continuar";
 "AddToBag" = "Adicionar à sacola";
 "Coffee" = "Cafés";

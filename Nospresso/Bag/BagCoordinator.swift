@@ -13,25 +13,15 @@ internal class BagCoordinator {
 extension BagCoordinator {
     
     internal static func createModule(navigationController: UINavigationController?) -> UIViewController {
-        let coordinator = BagCoordinator(navigationController: navigationController)
-        let presenter = BagPresenter(coordinator: coordinator)
-        let controller = BagViewController()
+        let presenter = BagsPresenter()
+        let controller = BagsViewController()
+        let repository = BagsRepository(output: presenter)
         
+        presenter.repository = repository
         presenter.view = controller
         controller.presenter = presenter
         
         return controller
     }
-    
-}
-
-extension BagCoordinator: BagCoordinatorProtocol {
-   
-    func openClients() {
-//        let controler = MenuClientsCoordinator.createModule(navigationController: navigationController)
-//
-//        navigationController?.pushViewController(controler, animated: true)
-    }
-    
     
 }

@@ -15,3 +15,18 @@ internal protocol AccessoryDetailViewControllerProtocol {
     func showAlert(with alert: UIAlertController)
     
 }
+
+// Repository -> Presenter
+internal protocol AccessoryDetailRepositoryOutputProtocol: AnyObject {
+    
+    func addToBagSucceeded()
+    func addToBagFailed()
+    
+}
+
+// Presenter -> Repository
+internal protocol AccessoryDetailRepositoryInputProtocol {
+    
+    func addToBag(with bag : Bag)
+    
+}

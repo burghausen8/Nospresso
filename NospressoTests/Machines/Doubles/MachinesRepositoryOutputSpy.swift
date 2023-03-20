@@ -5,11 +5,11 @@ class MachinesRepositoryOutputSpy: MachinesRepositoryOutputProtocol {
     var getMachinesSucceededCalled = false
     var getMachinesFailedCalled = false
     
-    func getMachinesSucceeded(_ data: MachinesResponse) {
+    func getMachinesSucceeded(_ data: [Machine]) {
         getMachinesSucceededCalled = true
     }
     
-    func getMachinesFailed(_ errorMessage: String) {
+    func getMachinesFailed() {
         getMachinesFailedCalled = true
     }
 

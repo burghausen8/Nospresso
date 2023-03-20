@@ -10,7 +10,7 @@ class MachineDetailViewControllerTestCase: XCTestCase {
     override func setUp() {
         isRecording = false
         
-        let presenter = MachineDetailPresenter(machine: MachinesResponse.dummy().machines[0])
+        let presenter = MachineDetailPresenter(machine: Machine.dummy()[0])
         
         sut = .init()
         sut.presenter = presenter

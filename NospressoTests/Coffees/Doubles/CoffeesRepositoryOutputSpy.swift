@@ -6,12 +6,14 @@ class CoffeesRepositoryOutputSpy: CoffeesRepositoryOutputProtocol {
     var getCapsulesFailedCalled = false
     var getCoffeeDetailSucceededCalled = false
     var getCoffeeDetailFailedCalled = false
+    var addToBagSucceededCalled = false
+    var addToBagFailedCalled = false
     
-    func getCapsulesSucceeded(_ data: CapsulesResponse) {
+    func getCapsulesSucceeded(_ data: [Capsules]) {
         getCapsulesSucceededCalled = true
     }
     
-    func getCapsulesFailed(_ errorMessage: String) {
+    func getCapsulesFailed() {
         getCapsulesFailedCalled = true
     }
     
@@ -19,8 +21,16 @@ class CoffeesRepositoryOutputSpy: CoffeesRepositoryOutputProtocol {
         getCoffeeDetailSucceededCalled = true
     }
     
-    func getCoffeeDetailFailed(_ errorMessage: String) {
+    func getCoffeeDetailFailed() {
         getCoffeeDetailFailedCalled = true
+    }
+    
+    func addToBagSucceeded() {
+        addToBagSucceededCalled = true
+    }
+    
+    func addToBagFailed() {
+        addToBagFailedCalled = true
     }
 
 }

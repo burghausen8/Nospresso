@@ -41,7 +41,7 @@ class MachineDetailPresenterTestCase: XCTestCase {
     }
     
     func setupSut() {
-        sut = .init(machine: MachinesResponse.dummy().machines[0])
+        sut = .init(machine: Machine.dummy()[0])
         sut.view = viewSpy
     }
     

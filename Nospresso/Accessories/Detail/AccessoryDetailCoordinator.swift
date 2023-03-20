@@ -13,10 +13,11 @@ internal class AccessoryDetailCoordinator {
 extension AccessoryDetailCoordinator {
     
     internal static func createModule(navigationController: UINavigationController?, accessory: Item) -> UIViewController {
-        let coordinator = AccessoryDetailCoordinator(navigationController: navigationController)
         let presenter = AccessoryDetailPresenter(accessory: accessory)
         let controller = AccessoryDetailViewController()
+        let repository = AccessoryDetailRepository(output: presenter)
         
+        presenter.repository = repository
         presenter.view = controller
         controller.presenter = presenter
         

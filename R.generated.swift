@@ -421,7 +421,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
     struct localizable {
       /// Value: %@ Capsulas,
       static let coffeeDetailCapsules = Rswift.StringResource(key: "CoffeeDetail.capsules", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -447,8 +447,12 @@ struct R: Rswift.Validatable {
       static let mainMenuMachinesButtonTitle = Rswift.StringResource(key: "MainMenuMachinesButton.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Nenhum item favoritado :(
       static let favoritesNothing = Rswift.StringResource(key: "Favorites.nothing", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Nenhum item na sacola :(
+      static let bagsNothing = Rswift.StringResource(key: "Bags.nothing", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Oba!
       static let oba = Rswift.StringResource(key: "Oba", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ocorreu um erro
+      static let alertViewMessageTitleError = Rswift.StringResource(key: "AlertViewMessageTitleError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Origem
       static let coffeeDetailOrigin = Rswift.StringResource(key: "CoffeeDetail.origin", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Para completar a balaca
@@ -459,6 +463,8 @@ struct R: Rswift.Validatable {
       static let alertViewMessage = Rswift.StringResource(key: "AlertViewMessage", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sem elas não rola café
       static let mainMenuMachinesButtonSubtitle = Rswift.StringResource(key: "MainMenuMachinesButton.subtitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Tente novamente mais tarde
+      static let alertViewMessageError = Rswift.StringResource(key: "AlertViewMessageError", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Torrefação
       static let coffeeDetailRoasting = Rswift.StringResource(key: "CoffeeDetail.roasting", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
@@ -624,6 +630,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Favorites.nothing", bundle: bundle, comment: "")
       }
 
+      /// Value: Nenhum item na sacola :(
+      static func bagsNothing(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Bags.nothing", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Bags.nothing"
+        }
+
+        return NSLocalizedString("Bags.nothing", bundle: bundle, comment: "")
+      }
+
       /// Value: Oba!
       static func oba(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -635,6 +654,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("Oba", bundle: bundle, comment: "")
+      }
+
+      /// Value: Ocorreu um erro
+      static func alertViewMessageTitleError(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("AlertViewMessageTitleError", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "AlertViewMessageTitleError"
+        }
+
+        return NSLocalizedString("AlertViewMessageTitleError", bundle: bundle, comment: "")
       }
 
       /// Value: Origem
@@ -700,6 +732,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("MainMenuMachinesButton.subtitle", bundle: bundle, comment: "")
+      }
+
+      /// Value: Tente novamente mais tarde
+      static func alertViewMessageError(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("AlertViewMessageError", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "AlertViewMessageError"
+        }
+
+        return NSLocalizedString("AlertViewMessageError", bundle: bundle, comment: "")
       }
 
       /// Value: Torrefação

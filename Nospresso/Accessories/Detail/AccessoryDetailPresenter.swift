@@ -5,11 +5,26 @@ internal class AccessoryDetailPresenter: NSObject {
     
     // MARK: Module
     internal var view: AccessoryDetailViewControllerProtocol?
+    internal var repository: AccessoryDetailRepositoryInputProtocol?
     internal let accessory: Item
     
     internal init(accessory: Item) {
         self.accessory = accessory
         super.init()
+    }
+    
+    private func createAlertView(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert
+        )
+        alert.addAction(UIAlertAction(title: Strings.continue(),
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil
+                                     )
+        )
+        
+        return alert
     }
     
 }
@@ -22,18 +37,26 @@ extension AccessoryDetailPresenter: AccessoryDetailPresenterProtocol {
     }
     
     func bagButtonTapped() {
-        let alert = UIAlertController(title: R.string.localizable.oba(),
-                                      message: R.string.localizable.alertViewMessage(),
-                                      preferredStyle: UIAlertController.Style.alert
-        )
-        alert.addAction(UIAlertAction(title: R.string.localizable.continue(),
-                                      style: UIAlertAction.Style.default,
-                                      handler: nil
-                                     )
-        )
-        view?.showAlert(with: alert)
-        
-        //TODO: como não tem back, a sacola não funcionará, apenas emitirá um alert na tela
+        repository?.addToBag(with: accessory.mapToBag())
+    }
+    
+}
+
+//MARK AccessoryDetailRepositoryOutputProtocol
+extension AccessoryDetailPresenter: AccessoryDetailRepositoryOutputProtocol {
+    
+    func addToBagSucceeded() {
+        DispatchQueue.main.async {
+            let alert = self.createAlertView(title: Strings.oba(), message: Strings.alertViewMessage())
+            self.view?.showAlert(with: alert)
+        }
+    }
+    
+    func addToBagFailed() {
+        DispatchQueue.main.async {
+            let alert = self.createAlertView(title: Strings.alertViewMessageTitleError(), message: Strings.alertViewMessageError())
+            self.view?.showAlert(with: alert)
+        }
     }
     
 }

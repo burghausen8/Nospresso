@@ -9,6 +9,14 @@ internal class MachinesViewController: UIViewController, LoadingViewType {
     // MARK: Module
     internal var presenter: MachinesPresenter? = nil
     
+    private lazy var errorView: ErrorView = {
+        let errorView = ErrorView()
+        errorView.delegate = self
+        errorView.isHidden = true
+        
+        return errorView
+    }()
+    
     private lazy var separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .gray
@@ -23,7 +31,7 @@ internal class MachinesViewController: UIViewController, LoadingViewType {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.isPagingEnabled = true
         collection.showsHorizontalScrollIndicator = false
-        collection.backgroundColor = R.color.maybeWhite()
+        collection.backgroundColor = Colors.maybeWhite()
         
         return collection
     }()
@@ -58,6 +66,23 @@ extension MachinesViewController: MachinesViewControllerProtocol {
     internal func hideLoad() {
         hideLoading()
     }
+    
+    internal func hideError() {
+        errorView.isHidden = true
+    }
+    
+    internal func showError() {
+        errorView.isHidden = false
+    }
+}
+
+//MARK: ErrorViewDelegateProtocol
+extension MachinesViewController: ErrorViewDelegateProtocol {
+    
+    func tryAgainButtonTapped() {
+        presenter?.tryAgainButtonTapped()
+    }
+    
 }
 
 extension MachinesViewController: CodableView {
@@ -65,14 +90,15 @@ extension MachinesViewController: CodableView {
     internal func buildViews() {
         view.addSubview(separatorView)
         view.addSubview(collectionView)
+        view.addSubview(errorView)
     }
     
     internal func configViews() {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navigationController?.navigationBar.tintColor = .white
-        navigationItem.title = R.string.localizable.machines()
+        navigationItem.title = Strings.machines()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.view.backgroundColor = R.color.mainMenuMachinesButton()
+        self.view.backgroundColor = Colors.mainMenuMachinesButton()
         
         //MARK: TableView Register
         collectionView.dataSource = presenter
@@ -90,6 +116,9 @@ extension MachinesViewController: CodableView {
         collectionView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        errorView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
 }

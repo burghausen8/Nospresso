@@ -38,7 +38,7 @@ internal class CoffeeDetailViewController: UIViewController {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named:"loader")
+        imageView.image = Images.loader()
         
         return imageView
     }()
@@ -51,7 +51,7 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var intensityLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Light", size: 11)
+        label.font = Fonts.get(type: .Light, size: 11)
         label.textColor = .gray
         
         return label
@@ -59,7 +59,7 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var capsulesLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Light", size: 14)
+        label.font = Fonts.get(type: .Light, size: 14)
         label.textColor = .gray
         
         return label
@@ -67,7 +67,7 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Light", size: 24)
+        label.font = Fonts.get(type: .Light, size: 24)
         label.textColor = .black
         
         return label
@@ -83,7 +83,7 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-SemiBoldItalic", size: 22)
+        label.font = Fonts.get(type: .SemiBoldItalic, size: 22)
         label.textColor = .black
         label.numberOfLines = 0
         
@@ -99,16 +99,16 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var originLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
+        label.font = Fonts.get(type: .Regular, size: 14)
         label.textColor = .black
-        label.text = R.string.localizable.coffeeDetailOrigin()
+        label.text = Strings.coffeeDetailOrigin()
         
         return label
     }()
     
     private lazy var originDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
+        label.font = Fonts.get(type: .Regular, size: 14)
         label.textColor = .gray
         
         return label
@@ -123,16 +123,16 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var roastingLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
+        label.font = Fonts.get(type: .Regular, size: 14)
         label.textColor = .black
-        label.text = R.string.localizable.coffeeDetailRoasting()
+        label.text = Strings.coffeeDetailRoasting()
         
         return label
     }()
     
     private lazy var roastingDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
+        label.font = Fonts.get(type: .Regular, size: 14)
         label.textColor = .gray
         label.numberOfLines = 0
         
@@ -148,16 +148,16 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var perfilLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
+        label.font = Fonts.get(type: .Regular, size: 14)
         label.textColor = .black
-        label.text = R.string.localizable.coffeeDetailPerfil()
+        label.text = Strings.coffeeDetailPerfil()
         
         return label
     }()
     
     private lazy var perfilDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
+        label.font = Fonts.get(type: .Regular, size: 14)
         label.textColor = .gray
         label.numberOfLines = 0
         
@@ -166,8 +166,8 @@ internal class CoffeeDetailViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let button = UIButton()
-        button.backgroundColor = R.color.greenShrek()
-        button.setTitle(R.string.localizable.addToBag(), for: .normal)
+        button.backgroundColor = Colors.greenShrek()
+        button.setTitle(Strings.addToBag(), for: .normal)
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(bagButtonTapped), for: .touchUpInside)
         
@@ -200,8 +200,8 @@ extension CoffeeDetailViewController: CoffeeDetailViewControllerProtocol {
     internal func setup(for coffee: CoffeeDetail) {
         
         imageView.loadImage(from: coffee.image)
-        intensityLabel.text = R.string.localizable.coffeTableViewCellIntensity(String(coffee.intensity))
-        capsulesLabel.text = R.string.localizable.coffeeDetailCapsules(String(10))
+        intensityLabel.text = Strings.coffeTableViewCellIntensity(String(coffee.intensity))
+        capsulesLabel.text = Strings.coffeeDetailCapsules(String(10))
         priceLabel.text = coffee.unitValue.toMoney
         titleLabel.text = coffee.description
         originDescriptionLabel.text = coffee.origin
@@ -256,7 +256,7 @@ extension CoffeeDetailViewController: CodableView {
     internal func configViews() {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navigationController?.navigationBar.tintColor = .black
-        self.view.backgroundColor = R.color.mainMenuCoffeeButton()
+        self.view.backgroundColor = Colors.mainMenuCoffeeButton()
         
     }
     

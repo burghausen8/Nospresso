@@ -41,7 +41,7 @@ internal class AccessoryDetailViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Bold", size: 26)
+        label.font = Fonts.get(type: .Bold, size: 26)
         label.textColor = .black
         label.numberOfLines = 0
         
@@ -50,7 +50,7 @@ internal class AccessoryDetailViewController: UIViewController {
     
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Light", size: 24)
+        label.font = Fonts.get(type: .Light, size: 24)
         label.textColor = .black
         
         return label
@@ -58,7 +58,7 @@ internal class AccessoryDetailViewController: UIViewController {
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Light", size: 16)
+        label.font = Fonts.get(type: .Light, size: 16)
         label.textColor = .gray
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -68,8 +68,8 @@ internal class AccessoryDetailViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let button = UIButton()
-        button.backgroundColor = R.color.greenShrek()
-        button.setTitle(R.string.localizable.addToBag(), for: .normal)
+        button.backgroundColor = Colors.greenShrek()
+        button.setTitle(Strings.addToBag(), for: .normal)
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(bagButtonTapped), for: .touchUpInside)
         

@@ -15,7 +15,7 @@ internal class MachineCollectionViewCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font =  UIFont(name: "OpenSans-Regular", size: 20)
+        label.font = Fonts.get(type: .Regular, size: 20)
         
         label.textColor = .black
         
@@ -40,7 +40,7 @@ internal class MachineCollectionViewCell: UICollectionViewCell {
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 22)
-        label.textColor = R.color.greenShrek()
+        label.textColor = Colors.greenShrek()
         
         return label
     }()

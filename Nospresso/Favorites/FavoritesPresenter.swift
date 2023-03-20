@@ -63,10 +63,10 @@ extension FavoritesPresenter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = R.color.headerTableView()
+        view.tintColor = Colors.headerTableView()
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = .black
-        header.textLabel?.font = UIFont(name: "OpenSans-Italic", size: 21)
+        header.textLabel?.font = Fonts.get(type: .Italic, size: 21)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40

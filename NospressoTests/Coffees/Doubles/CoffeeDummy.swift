@@ -1,11 +1,10 @@
 @testable import Nospresso
 import Foundation
 
-extension CapsulesResponse {
+extension Capsules {
     
-    static func dummy() -> CapsulesResponse {
-        return .init(capsules: [
-            Capsules(
+    static func dummy() -> [Capsules] {
+        return .init([Capsules(
                 category: "Edição Limitada",
                 coffees:
                     [Coffee(

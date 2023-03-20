@@ -18,14 +18,18 @@ internal protocol AccessoriesCoordinatorProtocol {
 internal protocol AccessoriesRepositoryInputProtocol {
     
     func getAccessories()
+    func addToBag(with bag : Bag)
     
 }
 
 // Repository -> Presenter
 internal protocol AccessoriesRepositoryOutputProtocol: AnyObject {
     
-    func getAccessoriesSucceeded(_ data: AccessoriesResponse)
-    func getAccessoriesFailed(_ errorMessage: String)
+    func getAccessoriesSucceeded(_ data: [Acessories])
+    func getAccessoriesFailed()
+    
+    func addToBagSucceeded()
+    func addToBagFailed()
     
 }
 

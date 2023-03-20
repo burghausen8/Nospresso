@@ -3,14 +3,12 @@ import Foundation
 internal class MachinesRepository {
     
     private weak var output: MachinesRepositoryOutputProtocol?
+    private let apiClient: API
     
-    internal init(output: MachinesRepositoryOutputProtocol
+    internal init(output: MachinesRepositoryOutputProtocol, api: API = .init()
     ) {
         self.output = output
-    }
-    
-    private func getRouter(id: Int) -> MachinesRouter {
-        return .machines
+        self.apiClient = api
     }
     
 }
@@ -19,23 +17,13 @@ extension MachinesRepository: MachinesRepositoryInputProtocol {
     
     internal func getMachines() {
         
-        //TODO: comentado, pois precisa de um back para funcionar, estou mockando os resultados para poder ver as telas
+        apiClient.request(endpoint: .machines) { [weak self] (machines: [Machine]) in
+            guard let self = self else { return }
+            
+            self.output?.getMachinesSucceeded(machines)
+        } failure: { [weak self] (error) in
+            self?.output?.getMachinesFailed()
+        }
         
-        //timer apenas apra ver o loading funcionando
-        let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(sendMachines), userInfo: nil, repeats: false)
     }
-    
-    @objc internal func sendMachines() {
-        self.output?.getMachinesSucceeded(MachinesResponse.dummy())
-    }
-    
-    //        apiClient.requestJSON(urlRequest: self.getRouter(id: id)) { [weak self] (result: Result<CoffeeDetailResponse>) in
-    //                switch result {
-    //                case .success(let data):
-    //                    self?.output?.getCoffeDetailSucceeded(data.coffees)
-    //                case .error(let error):
-    //                    self?.output?.getCoffeeDetailFailed(error.message)
-    //                }
-    //            }
-    
 }

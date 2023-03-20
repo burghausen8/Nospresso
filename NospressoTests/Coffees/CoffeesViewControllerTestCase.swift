@@ -21,7 +21,7 @@ class CoffeesViewControllerTestCase: XCTestCase {
     }
     
     func test_view_withItems_shouldMatchSnapshot() throws {
-        sut.presenter?.getCapsulesSucceeded(CapsulesResponse.dummy())
+        sut.presenter?.getCapsulesSucceeded(Capsules.dummy())
         
         assertSnapshot(matching: navigationController, as: .image)
     }

@@ -32,6 +32,19 @@ internal struct CoffeeDetail: Codable {
         case measurements = "medidas"
         case origin = "origem"
         case roasting = "torrefacao"
-        case perfil = "perfil aromatico"
+        case perfil = "perfilAromatico"
+    }
+}
+
+extension CoffeeDetail {
+    func mapToBag() -> Bag {
+        return Bag(id: Int.random(in: 0..<100000),
+                   originalId: id,
+                   name: name,
+                   description: description,
+                   unitValue: unitValue,
+                   image: image,
+                   type: .coffee
+        )
     }
 }

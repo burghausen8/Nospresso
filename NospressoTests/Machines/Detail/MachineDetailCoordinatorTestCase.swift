@@ -14,7 +14,7 @@ class MachineDetailCoordinatorTestCase: XCTestCase {
     
     func test_createModule_returnsViewController() {
         // When
-        let controller = MachineDetailCoordinator.createModule(navigationController: navigationControllerSpy, machine: MachinesResponse.dummy().machines[0])
+        let controller = MachineDetailCoordinator.createModule(navigationController: navigationControllerSpy, machine: Machine.dummy()[0])
         
         // Then
         XCTAssertTrue(controller is MachineDetailViewController)

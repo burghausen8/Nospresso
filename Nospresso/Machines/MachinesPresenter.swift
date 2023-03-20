@@ -23,6 +23,11 @@ extension MachinesPresenter: MachinesPresenterProtocol {
         repository?.getMachines()
     }
     
+    func tryAgainButtonTapped() {
+        view?.showLoad()
+        repository?.getMachines()
+    }
+    
 }
 
 //MARK: UICollectionViewDelegate
@@ -74,15 +79,18 @@ extension MachinesPresenter: UICollectionViewDataSource {
 //MARK: MachinesRepositoryOutputProtocol
 extension MachinesPresenter : MachinesRepositoryOutputProtocol {
     
-    func getMachinesSucceeded(_ data: MachinesResponse) {
-        self.machines = data.machines
-        view?.hideLoad()
-        view?.reloadData()
+    func getMachinesSucceeded(_ data: [Machine]) {
+        self.machines = data
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            self.view?.hideError()
+            self.view?.reloadData()
+        }
     }
     
-    func getMachinesFailed(_ errorMessage: String) {
+    func getMachinesFailed() {
         view?.hideLoad()
-        print(errorMessage)
+        view?.showError()
     }
     
 }

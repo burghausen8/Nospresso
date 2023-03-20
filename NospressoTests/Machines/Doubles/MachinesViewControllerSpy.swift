@@ -5,6 +5,8 @@ class MachinesViewControllerSpy: MachinesViewControllerProtocol {
     var reloadDataCalled = false
     var showLoadCalled = false
     var hideLoadCalled = false
+    var showErrorCalled = false
+    var hideErrorCalled = false
     
     func reloadData() {
         reloadDataCalled = true
@@ -16,6 +18,14 @@ class MachinesViewControllerSpy: MachinesViewControllerProtocol {
     
     func hideLoad() {
         hideLoadCalled = true
+    }
+    
+    func showError() {
+        showErrorCalled = true
+    }
+    
+    func hideError() {
+        hideErrorCalled = true
     }
 
 }

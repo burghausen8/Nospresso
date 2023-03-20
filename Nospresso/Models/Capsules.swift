@@ -1,15 +1,5 @@
 import Foundation
 
-internal struct CapsulesResponse: Codable {
-    
-    internal let capsules: [Capsules]
-    
-    internal enum CodingKeys: String, CodingKey {
-        case capsules = "capsulas"
-    }
-    
-}
-
 internal struct Capsules: Codable {
     
     internal let category: String
@@ -27,7 +17,7 @@ internal struct Coffee: Codable {
     internal let id: Int
     internal let name: String
     internal let description: String
-    internal let intensity: Int
+    internal let intensity: Int?
     internal let unitValue: Double
     internal let image: String
     internal let measurements: [String]
@@ -52,6 +42,17 @@ extension Coffee {
                         unitValue: unitValue,
                         image: image,
                         type: .coffee
+        )
+    }
+    
+    func mapToBag() -> Bag {
+        return Bag(id: Int.random(in: 0..<100000),
+                   originalId: id,
+                   name: name,
+                   description: description,
+                   unitValue: unitValue,
+                   image: image,
+                   type: .coffee
         )
     }
 }

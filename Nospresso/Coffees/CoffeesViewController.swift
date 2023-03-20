@@ -9,6 +9,13 @@ internal class CoffeesViewController: UIViewController, LoadingViewType {
     // MARK: Module
     internal var presenter: CoffeesPresenter? = nil
     
+    private lazy var errorView: ErrorView = {
+        let errorView = ErrorView()
+        errorView.delegate = self
+        
+        return errorView
+    }()
+    
     private lazy var separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .gray
@@ -19,6 +26,7 @@ internal class CoffeesViewController: UIViewController, LoadingViewType {
         let tableView = UITableView()
         tableView.layoutMargins = .zero
         tableView.separatorInset = .zero
+        tableView.backgroundColor = .white
         
         return tableView
     }()
@@ -28,7 +36,7 @@ internal class CoffeesViewController: UIViewController, LoadingViewType {
         super.viewDidLoad()
         setupViews()
         presenter?.viewDidLoad()
-        self.view.backgroundColor = R.color.mainMenuCoffeeButton()
+        self.view.backgroundColor = Colors.mainMenuCoffeeButton()
     }
     
     internal override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +66,23 @@ extension CoffeesViewController: CoffeesViewControllerProtocol {
         present(alert, animated: true, completion: nil)
     }
     
+    func showError() {
+        errorView.isHidden = false
+    }
+    
+    func hideError() {
+        errorView.isHidden = true
+    }
+    
+}
+
+//MARK: ErrorViewDelegateProtocol
+extension CoffeesViewController: ErrorViewDelegateProtocol {
+    
+    func tryAgainButtonTapped() {
+        presenter?.tryAgainButtonTapped()
+    }
+    
 }
 
 extension CoffeesViewController: CodableView {
@@ -65,13 +90,14 @@ extension CoffeesViewController: CodableView {
     internal func buildViews() {
         view.addSubview(separatorView)
         view.addSubview(tableView)
+        view.addSubview(errorView)
     }
     
     internal func configViews() {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        navigationItem.title = R.string.localizable.coffee()
+        navigationItem.title = Strings.coffee()
         
         //MARK: TableView Register
         tableView.dataSource = presenter
@@ -89,6 +115,9 @@ extension CoffeesViewController: CodableView {
         tableView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        errorView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
     

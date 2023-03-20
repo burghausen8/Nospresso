@@ -4,6 +4,7 @@ import SwiftUI
 internal protocol CoffeesPresenterProtocol {
     
     func viewDidLoad()
+    func tryAgainButtonTapped()
     
 }
 
@@ -19,6 +20,7 @@ internal protocol CoffeesRepositoryInputProtocol {
     
     func getCoffeeDetail(id: Int)
     func getCapsules()
+    func addToBag(with bag : Bag)
     
 }
 
@@ -26,10 +28,13 @@ internal protocol CoffeesRepositoryInputProtocol {
 internal protocol CoffeesRepositoryOutputProtocol: AnyObject {
     
     func getCoffeeDetailSucceeded(_ coffeeDetail: CoffeeDetail)
-    func getCoffeeDetailFailed(_ errorMessage: String)
+    func getCoffeeDetailFailed()
     
-    func getCapsulesSucceeded(_ data: CapsulesResponse)
-    func getCapsulesFailed(_ errorMessage: String)
+    func getCapsulesSucceeded(_ data: [Capsules])
+    func getCapsulesFailed()
+    
+    func addToBagSucceeded()
+    func addToBagFailed()
     
 }
 
@@ -40,5 +45,7 @@ internal protocol CoffeesViewControllerProtocol {
     func showLoad()
     func hideLoad()
     func showAlert(with alert: UIAlertController)
+    func showError()
+    func hideError()
     
 }

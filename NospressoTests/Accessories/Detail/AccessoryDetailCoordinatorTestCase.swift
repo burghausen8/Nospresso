@@ -14,7 +14,7 @@ class AccessoryDetailCoordinatorTestCase: XCTestCase {
     
     func test_createModule_returnsViewController() {
         // When
-        let controller = AccessoryDetailCoordinator.createModule(navigationController: navigationControllerSpy, accessory: AccessoriesResponse.dummy().accessories[0].items[0])
+        let controller = AccessoryDetailCoordinator.createModule(navigationController: navigationControllerSpy, accessory: Acessories.dummy()[0].items[0])
         
         // Then
         XCTAssertTrue(controller is AccessoryDetailViewController)

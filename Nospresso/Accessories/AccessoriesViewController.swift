@@ -19,6 +19,7 @@ internal class AccessoriesViewController: UIViewController, LoadingViewType {
         let tableView = UITableView()
         tableView.layoutMargins = .zero
         tableView.separatorInset = .zero
+        tableView.backgroundColor = .white
         
         return tableView
     }()
@@ -69,8 +70,8 @@ extension AccessoriesViewController: CodableView {
     internal func configViews() {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navigationController?.navigationBar.tintColor = .black
-        navigationItem.title = R.string.localizable.accessoriesTitle()
-        self.view.backgroundColor = R.color.mainMenuCoffeeButton()
+        navigationItem.title = Strings.accessoriesTitle()
+        self.view.backgroundColor = Colors.mainMenuCoffeeButton()
         
         //MARK: TableView Register
         tableView.dataSource = presenter

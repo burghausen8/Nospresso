@@ -21,7 +21,7 @@ class MachinesViewControllerTestCase: XCTestCase {
     }
     
     func test_view_withItems_shouldMatchSnapshot() throws {
-        sut.presenter?.getMachinesSucceeded(.dummy())
+        sut.presenter?.getMachinesSucceeded(Machine.dummy())
         
         assertSnapshot(matching: navigationController, as: .image)
     }

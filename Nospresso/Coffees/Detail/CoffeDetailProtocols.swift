@@ -15,3 +15,18 @@ internal protocol CoffeeDetailViewControllerProtocol {
     func showAlert(with alert: UIAlertController)
     
 }
+
+// Presenter -> Repository
+internal protocol CoffeeDetailRepositoryInputProtocol {
+    
+    func addToBag(with bag : Bag)
+    
+}
+
+// Repository -> Presenter
+internal protocol CoffeeDetailRepositoryOutputProtocol: AnyObject {
+    
+    func addToBagSucceeded()
+    func addToBagFailed()
+    
+}

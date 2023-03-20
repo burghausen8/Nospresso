@@ -3,14 +3,12 @@ import Foundation
 internal class AccessoriesRepository {
     
     private weak var output: AccessoriesRepositoryOutputProtocol?
+    private let apiClient: API
     
-    internal init(output: AccessoriesRepositoryOutputProtocol
+    internal init(output: AccessoriesRepositoryOutputProtocol, api: API = .init()
     ) {
         self.output = output
-    }
-    
-    private func getRouter() -> AccessoriesRouter {
-        return .accessories
+        self.apiClient = api
     }
     
 }
@@ -19,23 +17,23 @@ extension AccessoriesRepository: AccessoriesRepositoryInputProtocol {
     
     internal func getAccessories() {
         
-        //TODO: comentado, pois precisa de um back para funcionar, estou mockando os resultados para poder ver as telas
+        apiClient.request(endpoint: .accessories) { [weak self] (accessories: [Acessories]) in
+            guard let self = self else { return }
+            
+            self.output?.getAccessoriesSucceeded(accessories)
+        } failure: { [weak self] (error) in
+            self?.output?.getAccessoriesFailed()
+        }
         
-        //timer apenas apra ver o loading funcionando
-        let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(sendAccessories), userInfo: nil, repeats: false)
     }
     
-    @objc internal func sendAccessories() {
-        self.output?.getAccessoriesSucceeded(AccessoriesResponse.dummy())
+    internal func addToBag(with bag: Bag) {
+        
+        apiClient.request(endpoint: .bag, method: .post, objetct: bag) { [weak self] (retorno: Bag) in
+            self?.output?.addToBagSucceeded()
+        } failure: { (erro) in
+            self.output?.addToBagFailed()
+        }
+        
     }
-    
-    //        apiClient.requestJSON(urlRequest: self.getRouter(id: id)) { [weak self] (result: Result<CoffeeDetailResponse>) in
-    //                switch result {
-    //                case .success(let data):
-    //                    self?.output?.getCoffeDetailSucceeded(data.coffees)
-    //                case .error(let error):
-    //                    self?.output?.getCoffeeDetailFailed(error.message)
-    //                }
-    //            }
-    
 }

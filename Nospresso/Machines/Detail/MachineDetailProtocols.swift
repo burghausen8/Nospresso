@@ -13,3 +13,18 @@ internal protocol MachineDetailViewControllerProtocol {
     func showAlert(with alert: UIAlertController)
     
 }
+
+// Repository -> Presenter
+internal protocol MachineDetailRepositoryOutputProtocol: AnyObject {
+    
+    func addToBagSucceeded()
+    func addToBagFailed()
+    
+}
+
+// Presenter -> Repository
+internal protocol MachineDetailRepositoryInputProtocol {
+    
+    func addToBag(with bag : Bag)
+    
+}

@@ -14,7 +14,7 @@ class AccessoriesCoordinatorTestCase: XCTestCase {
     
     func test_openAccessoryDetail_shouldPushViewController() throws {
         //When
-        sut.openAccessoryDetail(with: AccessoriesResponse.dummy().accessories[0].items[0])
+        sut.openAccessoryDetail(with: Acessories.dummy()[0].items[0])
         
         //Then
         XCTAssertTrue(navigationControllerSpy.isPresentCalled)

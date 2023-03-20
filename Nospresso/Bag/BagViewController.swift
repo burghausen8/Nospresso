@@ -1,29 +1,47 @@
 import UIKit
 import SnapKit
 
-internal class BagViewController: UIViewController {
+internal class BagsViewController: UIViewController {
     
     // MARK: Module
-    internal var presenter: BagPresenter? = nil
+    internal var presenter: BagsPresenter? = nil
     
-    private lazy var contentView: UIView = {
-        let view = UIView()
+    internal let contentStackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.backgroundColor = .white
         
         return view
     }()
     
-    private lazy var label: UILabel = {
+    internal let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.layoutMargins = .zero
+        tableView.separatorInset = .zero
+        tableView.backgroundColor = .white
+        
+        return tableView
+    }()
+    
+    internal let nothingBagsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Fora do ar"
+        label.text = Strings.bagsNothing()
         label.textAlignment = .center
+        label.textColor = .black
         
         return label
     }()
     
-    //MARK: Override Methods
+    //MARK: override methods
     internal override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        presenter?.moduleLoaded()
+    }
+    
+    internal override func viewDidAppear(_ animated: Bool) {
+        presenter?.viewDidAppear()
+        super.viewDidAppear(false)
     }
     
     internal override func viewWillAppear(_ animated: Bool) {
@@ -33,30 +51,67 @@ internal class BagViewController: UIViewController {
     }
     
 }
-
-// MARK: BagViewProtocol
-extension BagViewController: BagViewProtocol {
+//MARK: BagsViewControllerProtocol
+extension BagsViewController: BagsViewControllerProtocol {
+    
+    
+    func hideLoad() {
+        //TODO: fazer load
+    }
+    
+    func showLoad() {
+        //TODO: fazer load
+    }
+    
+    internal func hiddenTableView() {
+        tableView.isHidden = true
+        nothingBagsLabel.isHidden = false
+    }
+    
+    internal func showTableView() {
+        tableView.isHidden = false
+        nothingBagsLabel.isHidden = true
+    }
+    
+    internal func reloadData() {
+        tableView.reloadData()
+    }
+    
+    internal func removeRow(at indexPath: [IndexPath], with local: UITableView.RowAnimation) {
+        tableView.deleteRows(at: indexPath, with: local)
+    }
     
 }
 
-extension BagViewController: CodableView {
+extension BagsViewController: CodableView {
     
     internal func buildViews() {
-        contentView.addSubview(label)
-        view.addSubview(contentView)
+        
+        contentStackView.addArrangedSubview(tableView)
+        contentStackView.addSubview(nothingBagsLabel)
+        view.addSubview(contentStackView)
     }
     
     internal func configViews() {
-        view.backgroundColor = .white
+        navigationController?.navigationBar.isHidden = true
+        
+        //MARK: TableView Register
+        tableView.dataSource = presenter
+        tableView.delegate = presenter
+        tableView.register(BagTableViewCell.self, forCellReuseIdentifier: "BagCell")
     }
     
     internal func configConstraints() {
-        label.snp.makeConstraints { make in
+        tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        contentView.snp.makeConstraints { make in
+        contentStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        nothingBagsLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
     
 }
+

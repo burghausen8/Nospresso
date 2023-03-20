@@ -3,7 +3,7 @@ import Rswift
 
 protocol AccessoryTableViewCellDelegate: AnyObject {
     
-    func bagButtonTapped()
+    func bagButtonTapped(with bag: Bag)
     
 }
 
@@ -16,6 +16,7 @@ internal class AccessoryTableViewCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
+        stackView.backgroundColor = .white
         
         return stackView
     }()
@@ -37,7 +38,7 @@ internal class AccessoryTableViewCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font =  UIFont(name: "OpenSans-Regular", size: 19)
+        label.font = Fonts.get(type: .Regular, size: 19)
         
         label.textColor = .black
         
@@ -47,7 +48,7 @@ internal class AccessoryTableViewCell: UITableViewCell {
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = R.color.greenShrek()
+        label.textColor = Colors.greenShrek()
         
         return label
     }()
@@ -78,7 +79,9 @@ internal class AccessoryTableViewCell: UITableViewCell {
     }()
     
     @objc private func bagButtonTapped() {
-        delegate?.bagButtonTapped()
+        if let accessory = accessory {
+            delegate?.bagButtonTapped(with: accessory.mapToBag())
+        }
     }
     
     @objc private func heartButtonTapped() {
@@ -122,6 +125,12 @@ extension AccessoryTableViewCell: CodableView {
         
         contentView.addSubview(contentStackView)
     }
+    
+    func configViews() {
+        contentView.backgroundColor = .white
+    }
+    
+    
     
     internal func configConstraints() {
         contentStackView.snp.makeConstraints { make in

@@ -9,6 +9,7 @@ internal class FavoriteTableViewCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
+        stackView.backgroundColor = .white
         
         return stackView
     }()
@@ -29,7 +30,7 @@ internal class FavoriteTableViewCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font =  UIFont(name: "OpenSans-Regular", size: 19)
+        label.font = Fonts.get(type: .Regular, size: 19)
         
         label.textColor = .black
         
@@ -38,7 +39,7 @@ internal class FavoriteTableViewCell: UITableViewCell {
     
     private lazy var typeItemLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 10)
+        label.font = Fonts.get(type: .Regular, size: 10)
         
         return label
     }()
@@ -46,7 +47,7 @@ internal class FavoriteTableViewCell: UITableViewCell {
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = R.color.greenShrek()
+        label.textColor = Colors.greenShrek()
         
         return label
     }()
@@ -75,6 +76,10 @@ extension FavoriteTableViewCell: CodableView {
         contentStackView.addArrangedSubview(priceLabel)
         
         contentView.addSubview(contentStackView)
+    }
+    
+    func configViews() {
+        contentView.backgroundColor = .white
     }
     
     internal func configConstraints() {

@@ -15,7 +15,9 @@ extension CoffeeDetailCoordinator {
     internal static func createModule(navigationController: UINavigationController?, coffee: CoffeeDetail) -> UIViewController {
         let presenter = CoffeeDetailPresenter(coffee: coffee)
         let controller = CoffeeDetailViewController()
+        let repository = CoffeeDetailRepository(output: presenter)
         
+        presenter.repository = repository
         presenter.view = controller
         
         controller.presenter = presenter

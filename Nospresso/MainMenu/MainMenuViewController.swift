@@ -17,20 +17,20 @@ internal class MainMenuViewController: UIViewController {
     
     private lazy var coffeesButton: MenuItemButton = {
         let button = MenuItemButton()
-        button.setup(title: R.string.localizable.coffee(),
-                     subtitle: R.string.localizable.mainMenuCoffeeButtonSubtitle() ,
+        button.setup(title: Strings.coffee(),
+                     subtitle: Strings.mainMenuCoffeeButtonSubtitle() ,
                      image: UIImage(named:"capsulas-inicio"),
-                     backgroundCollor: R.color.mainMenuCoffeeButton()
+                     backgroundCollor: Colors.mainMenuCoffeeButton()
         )
         return button
     }()
     
     private lazy var machinesButton: MenuItemButton = {
         let button = MenuItemButton()
-        button.setup(title: R.string.localizable.mainMenuMachinesButtonTitle(),
-                     subtitle: R.string.localizable.mainMenuMachinesButtonSubtitle(),
+        button.setup(title: Strings.mainMenuMachinesButtonTitle(),
+                     subtitle: Strings.mainMenuMachinesButtonSubtitle(),
                      image: UIImage(named:"maquina-inicio"),
-                     backgroundCollor: R.color.mainMenuMachinesButton()
+                     backgroundCollor: Colors.mainMenuMachinesButton()
         )
         
         return button
@@ -38,10 +38,10 @@ internal class MainMenuViewController: UIViewController {
     
     private lazy var accessoriesButton: MenuItemButton = {
         let button = MenuItemButton()
-        button.setup(title: R.string.localizable.mainMenuAccessoriesButtonTitle(),
-                     subtitle: R.string.localizable.mainMenuAccessoriesButtonSubtitle(),
-                     image: UIImage(named:"xicaras-inicio"),
-                     backgroundCollor: R.color.mainMenuAccessoriesButton()
+        button.setup(title: Strings.mainMenuAccessoriesButtonTitle(),
+                     subtitle: Strings.mainMenuAccessoriesButtonSubtitle(),
+                     image: Images.xicarasInicio(),
+                     backgroundCollor: Colors.mainMenuAccessoriesButton()
         )
         
         return button

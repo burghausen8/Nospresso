@@ -13,10 +13,11 @@ internal class MachineDetailCoordinator {
 extension MachineDetailCoordinator {
     
     internal static func createModule(navigationController: UINavigationController?, machine: Machine) -> UIViewController {
-        let coordinator = MachineDetailCoordinator(navigationController: navigationController)
         let presenter = MachineDetailPresenter(machine: machine)
         let controller = MachineDetailViewController()
+        let repository = MachineDetailRepository(output: presenter)
         
+        presenter.repository = repository
         presenter.view = controller
         controller.presenter = presenter
         

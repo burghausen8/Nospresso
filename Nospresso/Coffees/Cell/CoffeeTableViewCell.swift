@@ -3,14 +3,14 @@ import Rswift
 
 protocol CoffeeTableViewCellDelegate: AnyObject {
     
-    func bagButtonTapped()
+    func bagButtonTapped(with bag: Bag)
     
 }
 
 internal class CoffeeTableViewCell: UITableViewCell {
     
     private var coffee: Coffee?
-    private var delegate: CoffeeTableViewCellDelegate?
+    private weak var delegate: CoffeeTableViewCellDelegate?
     
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
@@ -44,7 +44,7 @@ internal class CoffeeTableViewCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font =  UIFont(name: "OpenSans-Regular", size: 19)
+        label.font = Fonts.get(type: .Regular, size: 19)
         
         label.textColor = .black
         
@@ -53,7 +53,7 @@ internal class CoffeeTableViewCell: UITableViewCell {
     
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
-        label.font =  UIFont(name: "OpenSans-LightItalic", size: 12)
+        label.font = Fonts.get(type: .Italic, size: 12)
         label.textColor = .gray
         
         return label
@@ -61,7 +61,7 @@ internal class CoffeeTableViewCell: UITableViewCell {
     
     private lazy var intensityLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-LightItalic", size: 9)
+        label.font = Fonts.get(type: .LightItalic, size: 9)
         label.textColor = .gray
         
         return label
@@ -76,7 +76,7 @@ internal class CoffeeTableViewCell: UITableViewCell {
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = R.color.greenShrek()
+        label.textColor = Colors.greenShrek()
         
         return label
     }()
@@ -107,7 +107,9 @@ internal class CoffeeTableViewCell: UITableViewCell {
     }()
     
     @objc private func bagButtonTapped() {
-        delegate?.bagButtonTapped()
+        if let coffee = coffee {
+            delegate?.bagButtonTapped(with: coffee.mapToBag())
+        }
     }
     
     @objc private func heartButtonTapped() {
@@ -127,7 +129,7 @@ internal class CoffeeTableViewCell: UITableViewCell {
         imageVieww.loadImage(from: coffee.image)
         titleLabel.text = coffee.name
         subtitleLabel.text = coffee.description
-        intensityLabel.text = R.string.localizable.coffeTableViewCellIntensity(String(coffee.intensity))
+        intensityLabel.text = Strings.coffeTableViewCellIntensity(String(coffee.intensity ?? 0))
         priceLabel.text = coffee.unitValue.toMoney
         self.coffee = coffee
         self.delegate = delegate
@@ -157,6 +159,10 @@ extension CoffeeTableViewCell: CodableView {
         contentStackView.addArrangedSubview(iconsStackView)
         
         contentView.addSubview(contentStackView)
+    }
+    
+    func configViews() {
+        contentView.backgroundColor = .white
     }
     
     internal func configConstraints() {

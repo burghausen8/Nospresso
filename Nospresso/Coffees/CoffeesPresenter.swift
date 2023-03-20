@@ -13,12 +13,31 @@ internal class CoffeesPresenter: NSObject {
         super.init()
     }
     
+    private func createAlertView(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert
+        )
+        alert.addAction(UIAlertAction(title: Strings.continue(),
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil
+                                     )
+        )
+        
+        return alert
+    }
+    
 }
 
 // MARK: CoffeesPresenterProtocol
 extension CoffeesPresenter: CoffeesPresenterProtocol {
     
     func viewDidLoad() {
+        view?.showLoad()
+        repository?.getCapsules()
+    }
+    
+    func tryAgainButtonTapped() {
         view?.showLoad()
         repository?.getCapsules()
     }
@@ -47,10 +66,10 @@ extension CoffeesPresenter: UITableViewDataSource {
         return nil
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = R.color.headerTableView()
+        view.tintColor = Colors.headerTableView()
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = .black
-        header.textLabel?.font = UIFont(name: "OpenSans-Italic", size: 21)
+        header.textLabel?.font = Fonts.get(type: .Italic, size: 21)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
@@ -80,43 +99,54 @@ extension CoffeesPresenter: UITableViewDataSource {
 
 //MARK: CoffesRepositoryOutputProtocol
 extension CoffeesPresenter : CoffeesRepositoryOutputProtocol {
-    
+
     func getCoffeeDetailSucceeded(_ coffeeDetail: CoffeeDetail) {
-        coordinator?.openCoffeeDetail(with: coffeeDetail)
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            self.view?.hideError()
+            self.coordinator?.openCoffeeDetail(with: coffeeDetail)
+        }
     }
     
-    func getCoffeeDetailFailed(_ errorMessage: String) {
-        print(errorMessage)
-    }
-    
-    func getCapsulesSucceeded(_ data: CapsulesResponse) {
+    func getCoffeeDetailFailed() {
         view?.hideLoad()
-        self.capsules = data.capsules
-        view?.reloadData()
+        view?.showError()
     }
     
-    func getCapsulesFailed(_ errorMessage: String) {
+    func getCapsulesSucceeded(_ data: [Capsules]) {
+        self.capsules = data
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            self.view?.hideError()
+            self.view?.reloadData()
+        }
+    }
+    
+    func getCapsulesFailed() {
         view?.hideLoad()
-        print(errorMessage)
+        view?.showError()
+    }
+    
+    func addToBagSucceeded() {
+        DispatchQueue.main.async {
+            self.view?.hideLoad()
+            let alert = self.createAlertView(title: Strings.oba(), message: Strings.alertViewMessage())
+            self.view?.showAlert(with: alert)
+        }
+    }
+    
+    func addToBagFailed() {
+        view?.hideLoad()
+        let alert = createAlertView(title: Strings.alertViewMessageTitleError(), message: Strings.alertViewMessageError())
+        view?.showAlert(with: alert)
     }
     
 }
 
 extension CoffeesPresenter: CoffeeTableViewCellDelegate {
     
-    func bagButtonTapped() {
-        let alert = UIAlertController(title: R.string.localizable.oba(),
-                                      message: R.string.localizable.alertViewMessage(),
-                                      preferredStyle: UIAlertController.Style.alert
-        )
-        alert.addAction(UIAlertAction(title: R.string.localizable.continue(),
-                                      style: UIAlertAction.Style.default,
-                                      handler: nil
-                                     )
-        )
-        view?.showAlert(with: alert)
-        
-        //TODO: como não tem back, a sacola não funcionará
+    func bagButtonTapped(with bag: Bag) {
+        repository?.addToBag(with: bag)
     }
     
 }

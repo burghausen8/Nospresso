@@ -14,7 +14,7 @@ class MachinesCoordinatorTestCase: XCTestCase {
     
     func test_openMachineDetail_shouldPushViewController() throws {
         //When
-        sut.openMachineDetail(with: MachinesResponse.dummy().machines[0])
+        sut.openMachineDetail(with: Machine.dummy()[0])
         
         //Then
         XCTAssertTrue(navigationControllerSpy.isPresentCalled)
