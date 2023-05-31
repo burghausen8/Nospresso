@@ -10,7 +10,7 @@ Projeto de app para venda de cápsulas de café e acessórios para a mesma, cont
 - Sacola, sendo muito parecida com a tela de favoritos, porém utiliza API para pegar dados.
 
 App criado em Swift UIKit, utilizando as seguintes especificações:
-- Padrão de estrutura VIPER 
+- Padrão de estrutura baseada em VIPER 
 - Comunicação via protocolos 
 - R.Swift 
 - ViewCode 
