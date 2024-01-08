@@ -82,6 +82,38 @@
             endingLineNumber = "195"
             landmarkName = "alternate(for:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A2F231D-C024-428E-A0E2-D6120E2F0C54 - dac5b2af29f0bf26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nospresso.CoffeeTableViewCell.alternate(for: Swift.Bool) -&gt; ()"
+                  moduleName = "Nospresso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabricioleandro/Desktop/Nospresso/Nospresso/Coffees/Cell/CoffeeTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "177">
+               </Location>
+               <Location
+                  uuid = "6A2F231D-C024-428E-A0E2-D6120E2F0C54 - a4e3d91e35f6fef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Nospresso.CoffeeTableViewCell.alternate(for: Swift.Bool) -&gt; ()"
+                  moduleName = "Nospresso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabricioleandro/Desktop/Nospresso/Nospresso/Coffees/Cell/CoffeeTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -225,22 +257,6 @@
             startingLineNumber = "36"
             endingLineNumber = "36"
             landmarkName = "getCapsules()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "75CD78F6-D750-4188-BA53-6610B4B34F90"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Nospresso/Resources/Network/API.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "request(endpoint:method:objetct:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -578,6 +594,38 @@
             endingLineNumber = "49"
             landmarkName = "addToBagSucceeded()"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "9083EE3F-58FC-4BC7-9F2E-65E06694F512 - 9af4ad8b116a3a3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nospresso.CoffeeDetailPresenter.addToBagSucceeded() -&gt; ()"
+                  moduleName = "Nospresso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabricioleandro/Desktop/Nospresso/Nospresso/Coffees/Detail/CoffeeDetailPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "9083EE3F-58FC-4BC7-9F2E-65E06694F512 - 29ee1586e99e0881"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Nospresso.CoffeeDetailPresenter.addToBagSucceeded() -&gt; ()"
+                  moduleName = "Nospresso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabricioleandro/Desktop/Nospresso/Nospresso/Coffees/Detail/CoffeeDetailPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -626,6 +674,38 @@
             endingLineNumber = "84"
             landmarkName = "getMachinesSucceeded(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "60659791-72FE-44D8-B33E-041C5976137D - 78497fa706b14814"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nospresso.MachinesPresenter.getMachinesSucceeded(Swift.Array&lt;Nospresso.Machine&gt;) -&gt; ()"
+                  moduleName = "Nospresso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabricioleandro/Desktop/Nospresso/Nospresso/Machines/MachinesPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "60659791-72FE-44D8-B33E-041C5976137D - ff1c276520c3fb49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Nospresso.MachinesPresenter.getMachinesSucceeded(Swift.Array&lt;Nospresso.Machine&gt;) -&gt; ()"
+                  moduleName = "Nospresso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabricioleandro/Desktop/Nospresso/Nospresso/Machines/MachinesPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -752,6 +832,22 @@
                   offsetFromSymbolStart = "19">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84D3FC0A-F7E9-4FB9-B6D5-AE6B0E1BF944"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nospresso/Coffees/CoffeesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getCapsules()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

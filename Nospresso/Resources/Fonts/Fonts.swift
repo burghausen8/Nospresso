@@ -13,7 +13,7 @@ enum FontType: String {
     case SemiBold = "OpenSans-SemiBold"
     case SemiBoldItalic = "OpenSans-SemiBoldItalic"
 }
-static func get(type: FontType, size: CGFloat) -> UIFont{
-    return UIFont(name: type.rawValue, size: size)!
+static func get(type: FontType, size: CGFloat) -> UIFont? {
+    return UIFont(name: type.rawValue, size: size)
 }
 }
