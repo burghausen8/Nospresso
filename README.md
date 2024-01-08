@@ -20,3 +20,10 @@ App criado em Swift UIKit, utilizando as seguintes especificações:
 - SnapKit
 - Testes Unitários utilizando XCTests
 - SnapshotTesting
+
+
+![image](https://github.com/burghausen8/Nospresso/assets/96838388/7b9f5723-f263-420c-8290-67da180d6e35)
+![image](https://github.com/burghausen8/Nospresso/assets/96838388/d96e8554-ef95-4d87-9f42-7d6bdf29ec14)
+![image](https://github.com/burghausen8/Nospresso/assets/96838388/c82dbeb6-0c8e-4502-8739-2b30cfd2d4f8)
+
+
