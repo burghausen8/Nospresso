@@ -18,5 +18,5 @@ App criado em Swift UIKit, utilizando as seguintes especificações:
 - Comunicação com API
 - LocalStorage
 - SnapKit
-- Testes Unitários 
+- Testes Unitários utilizando XCTests
 - SnapshotTesting
