@@ -6,7 +6,7 @@ Projeto de app para venda de cápsulas de café e acessórios para a mesma, cont
 - Acessórios a venda e detalhes dos acessórios, sendo uma replicação da tela de capsulas.
 - Maquinas a venda, montada com collectionView e requisições via API.
 - Detalhes das maquinas, sendo muito parecida com as demais telas de detalhes.
-- Favoritos, onde é possivel ver os intens favoritados e remover caso queira. Montado com tableView e dados do localStorage.
+- Favoritos, onde é possivel ver os itens favoritados e remover caso queira. Montado com tableView e dados do localStorage.
 - Sacola, sendo muito parecida com a tela de favoritos, porém utiliza API para pegar dados.
 
 App criado em Swift UIKit, utilizando as seguintes especificações:
